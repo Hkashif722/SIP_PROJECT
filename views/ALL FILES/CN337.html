@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<title></title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>    <!--main start -->
+  <style type="text/css">
+    .w3-sidebar h3{
+      margin-left:150px;
+      margin-top: 20px
+    }
+    .sidenav {
+  height: 100%;
+  width: 160px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+    div.a {
+  text-align: center;
+}
+ .bs-s{
+      margin: 20px;
+    }
+
+
+
+
+
+    .akshay{
+    background-color: red ;
+  box-shadow: 0 5px 0 darkred;
+  color: white;
+  padding: 1em 1.5em;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.akshay:hover {
+  background-color:  black;
+  cursor: pointer;
+}
+
+.akshay:active {
+  box-shadow: none;
+  top: 5px;
+}
+
+/* Non-Demo Styles */
+
+
+
+
+
+
+
+  </style>
+<body>
+<div class="jumbotron text-center" style="margin-bottom:0">
+      <h1>C I R C U I T A T I O N </h1>
+      <h4>A Circuit Designing And Simulation Website</h4> 
+</div>
+<div>
+ <nav class="navbar navbar-expand-sm aa bg-primary navbar-dark ">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+          <a class="nav-link text-white" action="/">MAIN PAGE </a>
+          </li>
+          <li class="nav-item">
+          <a class="nav-link text-white" href="templates/s3sip.html">RESET</a>
+          </li>
+          <li class="nav-item ">
+          <a class="nav-link text-white" href="c:/project/first.html">LOGOUT</a>
+          </li>
+        </ul>
+    </nav>
+</div>
+
+<!-- Sidebar -->
+
+<div class="container-fluid s">
+  <div class="row">
+    
+      <div class="col-xl-3">
+<br>
+        &nbsp;<h2><center>NOTIFICATION</center></h2>
+<form>
+  <br><br>
+  <a class="akshay " href="/listcon">Click here to get input details</a>
+         <br><br><br>
+       <table class="table table-sm table-dark"border = 1>
+         <thead>
+            <td>Vin(RMS)</td>
+            <td>Frequency</td>
+            <td>Ambient Temperature</td>
+            <td>Vout</td>
+            <!-- <td>Volt Ampere</td> -->
+            <td>Heat Sink</td>
+            
+         </thead>
+         
+         {% for row in rows %}
+            <tr>
+               <td>{{row["c1"]}}</td>
+               <td>{{row["c2"]}}</td>
+               <td> {{ row["c3"]}}</td>
+               <td>{{row['c4']}}</td>
+               <!-- <td>{{row['va']}}</td> -->
+               <td>{{row['T_hsa']}}</td> 
+            </tr>
+         {% endfor %}
+      </table><br><br>
+     
+
+</form>
+       
+         
+
+      
+      </div>
+      <div class="col-xl-8">
+        <img src="static\circuita\CN337.png" alt="Workplace" usemap="#workmap" width="1124" height="591">
+      <map name="workmap">
+      {% for row in rows %}
+         <area shape="rect" coords="230,31,305,117" href="#" data-placement="top"   data-toggle="popover" data-trigger="focus" title=" diode 1"  >
+  <area shape="rect" coords="387,32,460,116" href="#" data-placement="top"   data-toggle="popover" data-trigger="focus"title="Diode 2"  >
+  <area shape="rect" coords="230,204,306,286" href="#" data-placement="top"  data-toggle="popover" data-trigger="focus"title="Diode 3"  >
+  <area shape="rect" coords="387,200,457,284" href="#" data-placement="top"  data-toggle="popover"data-trigger="focus" title="Diode 4"  >
+  <area shape="rect" coords="725,27,808,114" href="#" data-placement="top"   data-toggle="popover" data-trigger="focus"title="Diode 5"  >
+
+
+
+
+        
+       <area shape="rect" coords="475,335,531,420" href="#" data-placement="top"  data-toggle="popover" data-trigger="focus"title="Electrolytic Capacitor 1" data-content="value= 10 ohms" >
+   <area shape="rect" coords="590,334,630,422" href="#" data-placement="top"  data-toggle="popover" data-trigger="focus"title=" Capacitor 2" data-content="value= 10 ohms" >
+   <area shape="rect" coords="860,322,895,394" href="#" data-placement="top"  data-toggle="popover" data-trigger="focus"title="Capacitor 3" data-content="value= 10 ohms" >
+   <area shape="rect" coords="945,320,985,403" href="#" data-placement="top"  data-toggle="popover" data-trigger="focus"title="Electrolytic Capacitor 4 :- 10uF" data-content="value= 10 ohms" >
+  
+  
+  <area shape="rect" coords="68,200,171,346" href="#" data-placement="top"  data-toggle="popover" data-trigger="focus"title="Transformer"  >
+
+  <area shape="rect" coords="3,198,60,344" href="#" data-placement="top"  data-toggle="popover" data-trigger="focus"title="Power Supply"  >
+
+  <area shape="rect" coords="675,517,717,583" href="#" data-placement="top"  data-toggle="popover" data-trigger="focus"title="Earthing"  >
+
+  <area shape="rect" coords="1045,265,1100,385" href="#" data-placement="top"  data-toggle="popover" data-trigger="focus"title="Load"  >
+
+  
+  <area shape="rect" coords="695,114,833,213" href="#" data-placement="top"  data-toggle="popover" data-trigger="focus"title="Voltage Regulator 7{{row['sign']}}0{{row['regu']}}"  >
+       {% endfor %}
+
+      </map>
+      
+      </div>
+      
+    
+    
+  </div>
+  
+</div>
+
+
+ <script type="text/javascript">
+ 
+    
+</script>
+
+      
+</body>
+</html>

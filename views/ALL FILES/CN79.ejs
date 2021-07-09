@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>    <!--main start -->
+  <style type="text/css">
+    .w3-sidebar h3{
+      margin-left:150px;
+      margin-top: 20px
+    }
+  </style>
+<body>
+<div class="jumbotron text-center" style="margin-bottom:0">
+      <h1>C I R C U I T A T I O N </h1>
+      <h4>A Circuit Designing And Simulation Website</h4> 
+</div>
+<div>
+ <nav class="navbar navbar-expand-sm aa bg-primary navbar-dark ">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+          <a class="nav-link text-white" href="c:/project/first.html">MAIN PAGE </a>
+          </li>
+          <li class="nav-item">
+          <a class="nav-link text-white" href="c:/project/second.html">RESET</a>
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link text-white" href="c:/project/first.html">LOGOUT</a>
+          </li>
+        </ul>
+    </nav>
+</div>
+
+<!-- Sidebar -->
+<div class="w3-sidebar w3-light-grey w3-bar-block" style="width:25%">
+  <center>&nbsp;&nbsp;&nbsp;<h3 class="w3-bar-item">NOTIFICATION</h3></center><br><br>
+  <div class="w3-container w3-blue">
+  <center><h2>Output Form</h2></center>
+</div><br><br>
+
+<form class="w3-container">
+   <fieldset disabled>
+    <div class="form-group">
+      <label for="disabledTextInput">Input</label>
+      <input type="text" id="Input1" class="form-control" placeholder="Input">
+    </div>
+    <fieldset disabled>
+    <div class="form-group">
+      <label for="disabledTextInput">Input</label>
+      <input type="text" id="Input2" class="form-control" placeholder="Input">
+    </div>
+ <fieldset disabled>
+    <div class="form-group">
+      <label for="disabledTextInput">Output</label>
+      <input type="text" id="Output" class="form-control" placeholder="Output">
+    </div>
+</form>
+</div>
+
+<!-- Page Content -->
+<div style="margin-left:25%">
+
+<div class="w3-container">
+  <h1></h1>
+
+</div>
+
+ <div class="container border">
+<br>
+<br>
+
+ <img src="C:\cir\cir\CN79.png" alt="Workplace" usemap="#workmap" width="1124" height="591">
+      <map name="workmap">
+         <area shape="rect" coords="236,22,310,101" href="#" data-placement="top"  data-toggle="popover" data-trigger="focus" title="Diode 1"  >
+  <area shape="rect" coords="387,22,458,101" href="#" data-placement="top"  data-toggle="popover"  data-trigger="focus" title="Diode 2"  >
+  <area shape="rect" coords="238,167,307,255" href="#" data-placement="top"  data-toggle="popover" data-trigger="focus" title="Diode 3"  >
+  <area shape="rect" coords="388,176,460,256" href="#" data-placement="top"  data-toggle="popover" data-trigger="focus" title="Diode 4"  >
+  <area shape="rect" coords="724,526,787,583" href="#" data-placement="top"  data-toggle="popover" data-trigger="focus" title="Diode 5"  >
+
+        
+         <area shape="rect" coords="478,296,530,380" href="#" data-placement="top"  data-toggle="popover" data-trigger="focus" title="Capacitor 1" data-content="value= 10 ohms" >
+   <area shape="rect" coords="594,298,636,380" href="#" data-placement="top"  data-toggle="popover" data-trigger="focus" title="Capacitor 2" data-content="value= 10 ohms" >
+   <area shape="rect" coords="869,286,903,355" href="#" data-placement="top"  data-toggle="popover" data-trigger="focus" title="Capacitor 3" data-content="value= 10 ohms" >
+   <area shape="rect" coords="950,286,995,356" href="#" data-placement="top"  data-toggle="popover" data-trigger="focus" title="Capacitor 4" data-content="value= 10 ohms" >
+  
+  <area shape="rect" coords="86,145,169,306" href="#" data-placement="top"    data-toggle="popover" data-trigger="focus" title="Transformer"  >
+
+  <area shape="rect" coords="3,168,60,312" href="#"   data-placement="top"    data-toggle="popover" data-trigger="focus" title="Power Supply"  >
+
+  <area shape="rect" coords="740,74,780,142" href="#" data-placement="top"    data-toggle="popover" data-trigger="focus" title="Earthing"  >
+
+  <area shape="rect" coords="1055,240,1106,355" href="#" data-placement="top" data-toggle="popover" data-trigger="focus" title="Load"  >
+
+  
+  <area shape="rect" coords="694,428,831,517" href="#" data-placement="top"   data-toggle="popover" data-trigger="focus" title="Voltage Regulator"  >
+      </map>
+</div>
+ <script type="text/javascript">
+    $(document).ready(function(){
+    $('[data-toggle="popover"]').popover(); 
+      
+});
+</script>
+
+      
+</body>
+</html>

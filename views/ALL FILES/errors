@@ -1,0 +1,129 @@
+<div class="container border">
+<br>
+<br>
+
+ <img src="C:\cir\cir\CP78.png" alt="Workplace" usemap="#workmap" width="1124" height="591">
+      <map name="workmap">
+      
+        <area shape="rect" coords="230,31,305,117" href="#" data-placement="top"   data-toggle="popover" data-trigger="focus"title="Diode 1"  >
+  <area shape="rect" coords="387,32,460,116" href="#" data-placement="top"   data-toggle="popover" data-trigger="focus"title="Diode 2"  >
+  <area shape="rect" coords="230,204,306,286" href="#" data-placement="top"  data-toggle="popover" data-trigger="focus"title="Diode 3"  >
+  <area shape="rect" coords="387,200,457,284" href="#" data-placement="top"  data-toggle="popover"data-trigger="focus" title="Diode 4"  >
+  <area shape="rect" coords="725,27,808,114" href="#" data-placement="top"   data-toggle="popover" data-trigger="focus"title="Diode 5"  >
+
+
+         <area shape="rect" coords="475,335,531,420" href="#" data-placement="top"  data-toggle="popover" data-trigger="focus"title="Capacitor 1" data-content="value= 10 ohms" >
+   <area shape="rect" coords="590,334,630,422" href="#" data-placement="top"  data-toggle="popover" data-trigger="focus"title="Capacitor 2" data-content="value= 10 ohms" >
+   <area shape="rect" coords="860,322,895,394" href="#" data-placement="top"  data-toggle="popover" data-trigger="focus"title="Capacitor 3" data-content="value= 10 ohms" >
+   <area shape="rect" coords="945,320,985,403" href="#" data-placement="top"  data-toggle="popover" data-trigger="focus"title="Capacitor 4" data-content="value= 10 ohms" >
+  
+  
+  <area shape="rect" coords="68,200,171,346" href="#" data-placement="top"  data-toggle="popover" data-trigger="focus"title="Transformer"  >
+
+  <area shape="rect" coords="3,198,60,344" href="#" data-placement="top"  data-toggle="popover" data-trigger="focus"title="Power Supply"  >
+
+  <area shape="rect" coords="675,517,717,583" href="#" data-placement="top"  data-toggle="popover" data-trigger="focus"title="Earthing"  >
+
+  <area shape="rect" coords="1045,265,1100,385" href="#" data-placement="top"  data-toggle="popover" data-trigger="focus"title="Load"  >
+
+  
+  <area shape="rect" coords="695,114,833,213" href="#" data-placement="top"  data-toggle="popover" data-trigger="focus"title="Voltage Regulator"  >
+      </map>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+PURVI SAMPAT8:16 PM
+print(type(v4))
+PURVI SAMPAT8:20 PM
+v4=int(v4)+int(v4)
+PURVI SAMPAT8:31 PM
+placeholder="1.0" step="0.01" min="0" max="10"
+
+
+
+ v4=()
+    v_in = ()
+    v_in_min = ()
+    v_rms = ()
+    f = ()
+    v_out = ()
+    i_out = ()
+    v_rpp = ()
+    dp = (2.5)
+    v_rpp_in_max = ()
+    RR = ()
+    i_d_avg = ()
+    i_d_peak = ()
+    va = ()
+    Ta = ()
+    Tj_max = ()
+    Pd = ()
+    T_ja_device = ()
+    T_ja_cal = ()
+    T_jc = ()
+    T_chs = ()
+    T_hsa = ()
+    r_317 = ()
+    r_337 = ()
+
+     vout = ()
+    sign = ()
+    
+
+
+
+
+
+    #Python3 code to demonstrate
+# smallest number greater than K
+# using naive method
+
+
+# Initializing list
+
+test_list = [0.1, 0.15, 0.22, 0.33, 0.47, 0.68, 1, 1.5, 2, 2.2, 3, 3.3, 4, 4.7, 5, 5.6, 6.8, 7, 8, 8.2, 10, 12, 15, 16, 18, 20, 21, 22, 24, 25, 27, 30, 33, 35, 36, 39, 40, 43, 47, 50, 53, 56, 60, 68, 72, 75, 82, 88, 100, 108, 120, 124, 130, 140, 145, 150, 161, 170, 180, 189, 200, 210, 216, 220, 230, 233, 240, 243, 250, 270, 300, 320, 324, 330, 340, 350, 370, 378, 380, 390, 400, 420, 430, 450 , 460, 470, 480, 500, 510, 520, 540, 550, 560 , 590, 620, 645, 650, 680, 700, 708, 730, 800, 820, 850, 860, 1000, 1100, 1200, 1300, 1400, 1500, 1600, 1700, 1800, 2000, 2100, 2200, 2500, 2600, 2700, 2800, 2900, 3000, 3100, 3300, 3400, 3500, 3600, 3700, 3900, 4000, 4100, 4200, 4300, 4600, 4700, 4800, 5000, 5100, 5400, 5500, 5600, 5800, 6000, 6500, 6800, 7200, 7400, 7600, 7800, 8200, 8300, 8400, 8700, 9000, 9600, 10000, 11000, 12000, 13000, 15000, 16000, 17000, 18000, 20000, 22000, 23000, 24000, 25000, 26000, 27000, 28000, 30000, 31000, 32000, 33000, 34000, 36000, 37000, 38000, 39000, 40000, 41000, 47000, 48000, 50000, 55000, 56000, 60000, 62000, 66000, 68000, 76000, 100000, 110000, 120000, 150000, 220000, 330000, 470000, 666000  ]
+
+# Initializing k
+
+k = 2c * 0.000001 # c= capacitor
+
+# Using naive method
+# to find smallest number
+# greater than K
+
+min_val = 2c #c= capacitor
+
+for i in test_list:
+
+    if min_val > i and i > k:
+        min_val = i
+
+    # Printing result
+    '''''The minimum value greater than capacitor is : '''''
+
+print(str(min_val))   

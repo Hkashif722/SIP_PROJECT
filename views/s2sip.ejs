@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title></title>
+    </head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>    <!--main start -->
+  <style type="text/css">
+    a.aa{
+      color: yellow;
+    }
+
+    .q{
+      background-color: #F9E5BC;
+      height: 550px;
+    }
+    .qq{
+      background-color: #F9E5BC;
+            height: 550px;
+    }
+    .w{
+
+   }
+  </style>
+<body>
+  <div class="jumbotron text-center" style="margin-bottom:0">
+      <h1>C I R C U I T A T I O N </h1>
+      <h4>A Circuit Designing And Simulation Website</h4> 
+  </div>
+  <div>
+      <nav class="navbar navbar-expand-sm aa bg-dark navbar-dark ">
+      <ul class="navbar-nav ">
+      <li class="nav-item  ">
+      <a class="nav-link text-success" action="/">MAIN PAGE </a>
+      </li>
+      <li class="nav-item ">
+      <a class="nav-link text-success" action="templates/s2sip.html">RESET</a>
+      </li>
+      </nav>
+  </div>
+ <!--nav and upper -->
+  <br>
+       <div class="container">
+        <h4><center>The output current [IL] and output ripple content [Vrpp(max)] has been kept fixed to 1A and 5mV respectively.</center></h4>
+        <h2><center>SELECT (CONSTANT OR VARIABLE)</center></h2>
+        <CENTER><select id='purpose' class="btn btn-secondary dropdown-toggle text-white">
+        <option >select</option>
+        <option value="0">variable</option>
+        <option value="1">constant</option> </select></CENTER>
+
+
+        
+                  <div style='display:none;' id='variable'><br/>&nbsp;
+                    <div class="form-group" id="0">
+                  
+                        <form class="was-validated" action = "/input" method="POST">
+                                  <div class="form-row">
+                                        <div class="col-md-12 mb-8">
+                                           <label for="v1">Vin(RMS)</label>
+                                             <input type="number" class="form-control " name="v1" min="0" max="250" placeholder="(0 - 250) volt" id="v1" required>
+                                               <div class="invalid-feedback">
+                                                   Please provide a valid value.
+                                               </div>
+                                         </div>
+                                          
+                                          <div class="col-md-12 mb-12 ">
+                                        <label for="v2">Frequency</label>
+                                           
+                                                            <input type="number" name="v2"  class="form-control " min="50" max="60" placeholder="( 50 Hz or 60 Hz )." id="v3" required>
+                                                               <div class="invalid-feedback">
+                                                                   Please provide a valid value.
+                                                                </div>
+                                                     
+                                                    </div>
+                                                    <div class="col-md-12 mb-8">
+                                                              <label for="c3">Ambient Temperature</label>
+                                                                 <input type="number" class="form-control " min="0"  max="120"  placeholder="( 0 - 120 )deg. C" name="v3"  id="c3" required> 
+                                                                  <div class="invalid-feedback">
+                                                                     Please provide a valid value.
+                                                                   </div>
+                                                            </div>
+                                      
+                                                       <div class="col-md-12 mb-8">
+                                                         <label for="v3">Vout From</label>
+                                                            <input type="number" name="v4"  class="form-control " min="-35" max="35" placeholder="( -35 to -1.2 ) ( 1.2  to  35 )." id="v3" required>
+                                                               <div class="invalid-feedback">
+                                                                   Please provide a valid value.
+                                                                </div>
+                                                        </div><br>
+
+                                                        <div class="col-md-12 mb-8">
+                                                           <label for="v4">Vout To</label>
+                                                              <input type="number" name="v5"  class="form-control " min="-35 " S max="35" placeholder="( -35 to -1.2 ) ( 1.2  to  35 )." id="v4" required>
+                                                                <div class="invalid-feedback">
+                                                                  Please provide a valid value.
+                                                                </div>
+                                                         </div>
+                                  </div>
+                                   <br><br><br>
+                                    <center><button type="submit" value="submit" class="btn btn-primary" >submit</button></center>
+                                  
+                        </form>
+
+                    </div>
+                  </div>
+                  <div style='display:none;' id='constant'><br/>&nbsp;
+                    <div class="form-group" id="1">
+                   
+                        <form class="was-validated" action = "/inputa" method="POST">
+                           <div class="form-row">
+                             <div class="col-md-12 mb-8">
+                                <label for="c1">Vin(RMS)</label>
+                                <input type="number" name="c1"  class="form-control " min="0" max="250" step="0.1" placeholder="(0 - 250 ) volt" id="c1" required>
+                                
+                             <div class="invalid-feedback">
+                                 Please provide a valid value.
+                             </div>
+                            </div>
+                                     
+                                     <div class="col-md-12 mb-12 ">
+                                        <label for="v2">Frequency</label>
+                                           
+                          <input type="number"name="c2"  class="form-control " step="10" min="50" max="60"
+                           placeholder="( 50 Hz or 60 Hz )." id="v3" required>
+                                                               <div class="invalid-feedback">
+                                                                   Please provide a valid value.
+                                                                </div>
+                                                     
+                                                    </div>
+                                                      <div class="col-md-12 mb-8">
+                                                              <label for="c3">Ambient Temperature</label>
+                                                                 <input type="number" class="form-control " step="0.1" min="0"  max="120"  placeholder="( 0 - 120 )deg. C" id="c3" name="c3" required> 
+                                                                  <div class="invalid-feedback">
+                                                                     Please provide a valid value.
+                                                                   </div>
+                                                            </div>
+                                                         
+                                                        <div class="col-md-12 mb-8">
+                                                       <label for="c3">Vout</label>
+  <input type="number" name="c4" class="form-control " step="0.1" min="-35"  max="35"  placeholder="( -35 to -1.2 ) ( 1.2  to  35 ) volt" id="c3" required> 
+                                                                  <div class="invalid-feedback">
+                                                                     Please provide a valid value.
+                                                                   </div>
+                                                            </div>
+                   </div>
+                     <br><br><br><br>
+                      <center> <button type="submit" value="submit" class="btn btn-primary" >Submit</button></center>
+                      </form>
+                    </div>
+                  </div>
+
+      </div>
+         
+          
+                  
+                  
+
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+                 </script>
+                 <script>
+                 $(document).ready(function(){
+                     $('#purpose').on('change', function() {
+                       if ( this.value == '0')
+                       //.....................^.......
+                       {
+                         $("#variable").show();
+                       }
+                       else
+                       {
+                         $("#variable").hide();
+                       }
+                     });
+                     
+                 });
+                 $(document).ready(function(){
+                     $('#purpose').on('change', function() {
+                       if ( this.value == '1')
+                       //.....................^.......
+                       {
+                         $("#constant").show();
+                       }
+                       else
+                       {
+                         $("#constant").hide();
+                       }
+                     });
+                     
+                 });
+                 
+                 </script>
+
+
+</body>
+</html>
