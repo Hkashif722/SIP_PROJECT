@@ -21,7 +21,7 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
-mongoose.connect("mongodb://localhost:27017/sipDB", {
+mongoose.connect("mongodb+srv://Vanillachoco7:V7@cluster0.q38bu.mongodb.net/sipDB", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
