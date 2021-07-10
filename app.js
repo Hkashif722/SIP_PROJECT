@@ -21,7 +21,7 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
-mongoose.connect("mongodb+srv://Vanillachoco7:V7@cluster0.q38bu.mongodb.net/sipDB", {
+mongoose.connect("mongodb+srv://Vanillachoco7:V7QAwQe9UAKsh2F@cluster0.q38bu.mongodb.net/sipDB", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
@@ -78,6 +78,11 @@ app.post("/login", (req, res) => {
       });
     }
   });
+});
+
+app.get("/logout", (req, res) => {
+  req.logOut();
+  res.redirect("/");
 });
 
 app.listen("3001", () => {
