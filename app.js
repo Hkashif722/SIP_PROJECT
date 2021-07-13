@@ -1,5 +1,6 @@
 const express = require("express");
 const ejs = require("ejs");
+const varCalc = require(__dirname + "/variable.js");
 const mongoose = require("mongoose");
 const session = require("express-session");
 const passport = require("passport");
@@ -42,9 +43,12 @@ app.get("/", (req, res) => {
   res.render("s1sip");
 });
 
-// app.post("/input", (req, res) => {
-//   res.send(req.body);
-// });
+app.post("/input", (req, res) => {
+  let value = req.body;
+  console.log(value);
+  let calValue = varCalc.variable(value.v1, value.v2, value.v3, value.v4, value.v5);
+  res.render("s3sipcon", { v1: calValue[0] });
+});
 
 app.get("/page", (req, res) => {
   if (req.isAuthenticated()) res.render("s2sip");
