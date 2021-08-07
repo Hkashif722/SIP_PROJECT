@@ -41,15 +41,25 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
   />
+ <!-- Aos -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+
+  <!-- Aos -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js" ></script>
 
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <style>
+
+    html{
+      scroll-behavior:smooth;
+    }
     .bgimg {
-      background-image: url("/home/bg.jpg");
+      background-image: url("/home/bg1.png");
       background-size: 100% 100%;
       background-attachment: fixed;
       width: 100%;
-      height: 1100px;
+      height: 160%;
+      padding-bottom: 20%;
       
     }
 
@@ -61,31 +71,42 @@
     }
 
     .hearderset {
-      padding-top: 130px;
+      padding-top: 180px;
       box-sizing: border-box;
-
+      margin-left: 0%;
+      
     }
-
+    
     .hearderset h2 {
-      font-size: 42px;
-      font-family: 'Uchen', serif;
+      font-size: 52px;
+      font-family: 'Lato', sans-serif;
       padding-top: 15px;
-      line-height: 15px;
+      line-height: 50px;
       padding-top: 60px;
       
     }
 
     .hearderset h1 {
-      font-size: 82px;
+      font-size: 120px;
       font-weight: bold;
-      font-family: 'Uchen', serif;
+      font-family: 'Lato', sans-serif;
       line-height: 100px;
     }
 
     .hearderset h4 {
      
-      line-height: 5px;
+      line-height: 10px;
+      font-size: 30px;
+      font-weight: bold;
+      
     }
+
+    .hearderset h6{
+     
+     line-height: 25px;
+     font-size: 20px;
+     
+   }
 
 
     /*
@@ -275,7 +296,7 @@
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="nav nav-tabs" id="mytab">
+          <div class="collapse navbar-collapse" id="collapsenavbar">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item ">
                 <a
@@ -314,12 +335,12 @@
       </nav>
       <img class="ppq" src="logo.png" />
 
-      <div class="container text-center text-white hearderset" class="Home" name="Home" id="Home">
-        <h2 class="text-secondary k">WELCOME TO</h2>
+      <div class="content container text-center text-white hearderset" class="Home" name="Home" id="Home">
+        <h2 class="text-white k"">WELCOME TO</h2>
         <br />
-        <h1 class="display-2 text-success">CIRCUITATION</h1>
+        <h1 class="display-2 text-white ">CIRCUITATION</h1>
         <br />
-        <h4 class="text-secondary">Vishwakarma Institute Of Information Technology</h4>
+        <h4 class="text-white ">Vishwakarma Institute Of Information Technology</h4>
         <br />
         <h6>Circuitation: A Circuit Schema Provider provides different electronic circuits<br> based on users requirments. It provides an user-friendly environment to <br> display circuits that could save your time during all the phases of<br> designing process.</h6>
       </div>
@@ -327,25 +348,25 @@
 
     <!--................................................circuits............................-->
 
-    <section class="container circuits text-center">
-      <h1>CIRCUITS</h1>
-      <p>Our Circuits are</p>
+    <section class="container circuits text-center " data-aos="fade-right" > 
+      <h1 data-aos="fade-left" data-aos-offset="300" data-aos-duration="500">CIRCUITS</h1>
+      <p data-aos="fade-left" data-aos-offset="300" data-aos-duration="800">Our Circuits are</p>
 
-      <div class="row rowsetting">
-        <div class="col-lg-4 col-md-4 col-sm-4 col-10 d-block m-auto">
+      <!--<div class="row rowsetting">
+        <div class="col-lg-4 col-md-4 col-sm-4 col-10 d-block m-auto ">
           <div class="imgsetting d-block m-auto"><i class=""></i></div>
 
           <h2></h2>
           <p></p>
-        </div>
+        </div>-->
 
-        <div class="col-lg-4 col-md-4 col-sm-4 col-10 d-block m-auto">
-          <div class="imgsetting d-block m-auto bg-success">
-            <i class="fa fa-power-off fa-3x text-white"></i>
+        <div class="col-lg-4 col-md-4 col-sm-4 col-10 d-block m-auto "data-aos="fade-left" data-aos-offset="">
+          <div class="imgsetting d-block m-auto bg-success" data-aos="zoom-in" data-aos-offset="300" data-aos-duration="1200">
+            <i class="fa fa-power-off fa-3x text-white "data-aos="zoom-in" data-aos-duration="3000"></i>
           </div>
 
-          <h2>Linear Power Supply</h2>
-          <p>
+          <h2 data-aos="fade-right" data-aos-offset="300" data-aos-duration="1600">Linear Power Supply</h2>
+          <p data-aos="fade-right" data-aos-offset="600" data-aos-duration="2000">
             The Linear Power Supply is power supplying circuit which is used in electrical and
             electronic circuit to supply the DC power to the circuit. It consists of a step-down
             transformer, rectifier, a filter circuit and voltage regulator. The AC is always
@@ -353,13 +374,13 @@
           </p>
         </div>
 
-        <div class="col-lg-4 col-md-4 col-sm-4 col-10 d-block m-auto">
+       <!-- <div class="col-lg-4 col-md-4 col-sm-4 col-10 d-block m-auto ">
           <div class="imgsetting d-block m-auto"><i class=""></i></div>
 
           <h2></h2>
           <p></p>
         </div>
-      </div>
+      </div>-->
     </section>
 
     <!--//////////////////////////////////////////portfolio////////////////////////////////////////-->
@@ -452,7 +473,7 @@
           <div class="col-lg-6 col-md-6 col-sm-10 col-12 d-block m-auto">
             <figure class="figure">
               <img
-                src="public/ourteam/abhishek.jpeg"
+                src="ourteam/abhishek.jpeg"
                 class="rounded-circle"
                 alt="Cinque Terre"
                 width="250"
@@ -469,7 +490,7 @@
           <div class="col-lg-6 col-md-6 col-sm-10 col-12 d-block m-auto">
             <figure class="figure">
               <img
-                src="public/ourteam/akshay.jpg"
+                src="ourteam/akshay.jpg"
                 class="rounded-circle"
                 alt=""
                 width="250"
@@ -488,7 +509,7 @@
           <div class="col-lg-6 col-md-6 col-sm-10 col-12 d-block m-auto">
             <figure class="figure">
               <img
-                src="public/ourteam/Shashank.jpeg"
+                src="ourteam/Shashank.jpeg"
                 class="rounded-circle"
                 alt="Cinque Terre"
                 width="250"
@@ -505,7 +526,7 @@
           <div class="col-lg-6 col-md-6 col-sm-10 col-12 d-block m-auto">
             <figure class="figure">
               <img
-                src="public/ourteam/Anushka.jpeg"
+                src="ourteam/Anushka.jpeg"
                 class="rounded-circle"
                 alt=""
                 width="250"
@@ -668,5 +689,13 @@
         </div>
       </div>
     </div>
+
+    <script>
+      AOS.init({
+        
+        
+      });
+    </script>
   </body>
+  
 </html>
