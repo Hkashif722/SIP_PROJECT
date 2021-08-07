@@ -1,6 +1,8 @@
 const express = require("express");
 const ejs = require("ejs");
 const varCalc = require(__dirname + "/variable.js");
+const constCalc = require(__dirname + "/constant");
+
 const mongoose = require("mongoose");
 const session = require("express-session");
 const passport = require("passport");
@@ -22,7 +24,7 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
-mongoose.connect("mongodb+srv://Vanillachoco7:V7Q@cluster0.q38bu.mongodb.net/sipDB", {
+mongoose.connect("mongodb+srv://Vanillachoco7:<password>@cluster0.q38bu.mongodb.net/sipDB", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
@@ -31,6 +33,17 @@ const userSchema = new mongoose.Schema({
   username: String,
   password: String,
 });
+
+const valueSchema = {
+  value: Number,
+};
+
+const Value = mongoose.model("Value", valueSchema);
+// let x = Number(1350);
+// Value.find((err, docs) => {
+//   //console.log(docs);
+//   //console.log(varCalc.absValue(docs, x));
+// });
 
 userSchema.plugin(passportLocalMongoose);
 
@@ -41,13 +54,38 @@ passport.deserializeUser(User.deserializeUser());
 
 app.get("/", (req, res) => {
   res.render("s1sip");
+  // Value.find((err, docs) => {
+  //   res.send(docs);
+  // });
 });
 
-app.post("/input", (req, res) => {
+// app.post("/input", (req, res) => {
+//   let value = req.body;
+//   let calValue = varCalc.variable(value.v1, value.v2, value.v3, value.v4, value.v5);
+//   console.log(calValue);
+//   res.render("s3sipcon", { v1: calValue });
+// });
+
+app.post("/inputa", (req, res) => {
   let value = req.body;
-  console.log(value);
-  let calValue = varCalc.variable(value.v1, value.v2, value.v3, value.v4, value.v5);
-  res.render("s3sipcon", { v1: calValue[0] });
+  let calvalue = constCalc.constant(value.c1, value.c2, value.c3, value.c4);
+  let v_out = calvalue.vout;
+  // +ve 7800
+  if (
+    v_out === 5 ||
+    v_out === 6 ||
+    v_out === 8 ||
+    v_out === 9 ||
+    v_out === 10 ||
+    v_out === 12 ||
+    v_out === 15 ||
+    v_out === 18 ||
+    v_out === 24
+  ) {
+    res.render("CP78", { c_Values: calvalue });
+  } else {
+    res.render("CP317", { c_Values: calvalue });
+  }
 });
 
 app.get("/page", (req, res) => {
