@@ -43,21 +43,21 @@
    <fieldset disabled>
     <div class="form-group">
       <label for="disabledTextInput">V(RMS)</label>
-      <input type="text" id="Input1" class="form-control" placeholder="Input">
+      <input type="text" id="Input1" class="form-control" value="<%=c_Values.v_in%>" placeholder="Input">
     </div>
     <fieldset disabled>
     <div class="form-group">
       <label for="disabledTextInput">Frequency</label>
-      <input type="text" id="Input2" class="form-control" placeholder="Input">
+      <input type="text" id="Input2" class="form-control" value = "<%=c_Values.freq%>" placeholder="Input">
     </div>
  <fieldset disabled>
     <div class="form-group">
       <label for="disabledTextInput">Ambient Temperature</label>
-      <input type="text" id="Output" class="form-control" placeholder="Output">
+      <input type="text" id="Output" class="form-control" value="<%=c_Values.vout%>" placeholder="Output">
     </div>
     <div class="form-group">
       <label for="disabledTextInput">VOut</label>
-      <input type="text" id="Output" class="form-control" placeholder="Output">
+      <input type="text" id="Output" class="form-control" value="<%=c_Values.vout%>" placeholder="Output">
     </div>
 </form>
 <br>
@@ -69,17 +69,17 @@
    <fieldset disabled>
     <div class="form-group">
       <label for="disabledTextInput">Input</label>
-      <input type="text" id="Input1" class="form-control" placeholder="Input">
+      <input type="text" id="Input1" class="form-control" value=" <%=c_Values.v_a%>" placeholder="Input">
     </div>
     <fieldset disabled>
     <div class="form-group">
       <label for="disabledTextInput">Input</label>
-      <input type="text" id="Input2" class="form-control" placeholder="Input">
+      <input type="text" id="Input2" class="form-control" value=" <%=c_Values.c%>" placeholder="Input">
     </div>
  <fieldset disabled>
     <div class="form-group">
       <label for="disabledTextInput">Output</label>
-      <input type="text" id="Output" class="form-control" placeholder="Output">
+      <input type="text" id="Output" class="form-control" value=" <%=c_Values.img_label%>" placeholder="Output">
     </div>
 </form>
 </div>
@@ -106,22 +106,22 @@
   <area shape="rect" coords="725,27,808,114" href="#" data-placement="top"   data-toggle="popover" data-trigger="focus"title="Diode 5"  >
 
 
-         <area shape="rect" coords="475,335,531,420" href="#" data-placement="top"  data-toggle="popover" data-trigger="focus"title="Capacitor 1" data-content="value= 10 ohms" >
+         <area shape="rect" coords="475,335,531,420" href="#" data-placement="top"  data-toggle="popover" data-trigger="focus"title="Capacitor 1" data-content="<%=c_Values.c%> ohms" >
    <area shape="rect" coords="590,334,630,422" href="#" data-placement="top"  data-toggle="popover" data-trigger="focus"title="Capacitor 2" data-content="value= 10 ohms" >
    <area shape="rect" coords="860,322,895,394" href="#" data-placement="top"  data-toggle="popover" data-trigger="focus"title="Capacitor 3" data-content="value= 10 ohms" >
    <area shape="rect" coords="945,320,985,403" href="#" data-placement="top"  data-toggle="popover" data-trigger="focus"title="Capacitor 4" data-content="value= 10 ohms" >
   
   
-  <area shape="rect" coords="68,200,171,346" href="#" data-placement="top"  data-toggle="popover" data-trigger="focus"title="Transformer"  >
+  <area shape="rect" coords="68,200,171,346" href="#" data-placement="top"  data-toggle="popover" data-trigger="focus"title="Transformer: <%=c_Values.v_a%>"  >
 
   <area shape="rect" coords="3,198,60,344" href="#" data-placement="top"  data-toggle="popover" data-trigger="focus"title="Power Supply"  >
 
   <area shape="rect" coords="675,517,717,583" href="#" data-placement="top"  data-toggle="popover" data-trigger="focus"title="Earthing"  >
 
-  <area shape="rect" coords="1045,265,1100,385" href="#" data-placement="top"  data-toggle="popover" data-trigger="focus"title="Load"  >
+  <area shape="rect" coords="1045,265,1100,385" href="#" data-placement="top"  data-toggle="popover" data-trigger="focus"title="Load: <%=c_Values.vout%>""  >
 
   
-  <area shape="rect" coords="695,114,833,213" href="#" data-placement="top"  data-toggle="popover" data-trigger="focus"title="Voltage Regulator"  >
+  <area shape="rect" coords="695,114,833,213" href="#" data-placement="top"  data-toggle="popover" data-trigger="focus"title="Voltage Regulator: <%=c_Values.img_label%>""  >
       </map>
 </div>
 

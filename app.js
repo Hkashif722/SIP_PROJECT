@@ -24,7 +24,7 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
-mongoose.connect("mongodb+srv://Vanillachoco7:<password>@cluster0.q38bu.mongodb.net/sipDB", {
+mongoose.connect("mongodb+srv://Vanillachoco7:V7QAwQe9UAKsh2F@cluster0.q38bu.mongodb.net/sipDB", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
@@ -59,32 +59,50 @@ app.get("/", (req, res) => {
   // });
 });
 
-// app.post("/input", (req, res) => {
-//   let value = req.body;
-//   let calValue = varCalc.variable(value.v1, value.v2, value.v3, value.v4, value.v5);
-//   console.log(calValue);
-//   res.render("s3sipcon", { v1: calValue });
-// });
+app.post("/input", (req, res) => {
+  let value = req.body;
+  let calValue = varCalc.variable(value.v1, value.v2, value.v3, value.v4, value.v5);
+  if (calValue.vout > 0 && calValue.voutTo > 0) res.render("VP317", { v1: calValue });
+  else if (calValue.vout < 0 && calValue.voutTo < 0) res.render("VN337");
+  else res.render("VCOMB");
+});
 
 app.post("/inputa", (req, res) => {
   let value = req.body;
   let calvalue = constCalc.constant(value.c1, value.c2, value.c3, value.c4);
   let v_out = calvalue.vout;
+  console.log(calvalue);
   // +ve 7800
-  if (
-    v_out === 5 ||
-    v_out === 6 ||
-    v_out === 8 ||
-    v_out === 9 ||
-    v_out === 10 ||
-    v_out === 12 ||
-    v_out === 15 ||
-    v_out === 18 ||
-    v_out === 24
-  ) {
-    res.render("CP78", { c_Values: calvalue });
+  if (v_out > 0) {
+    if (
+      v_out === 5 ||
+      v_out === 6 ||
+      v_out === 8 ||
+      v_out === 9 ||
+      v_out === 10 ||
+      v_out === 12 ||
+      v_out === 15 ||
+      v_out === 18 ||
+      v_out === 24
+    ) {
+      res.render("CP78", { c_Values: calvalue });
+    } else {
+      res.render("CP317", { c_Values: calvalue });
+    }
   } else {
-    res.render("CP317", { c_Values: calvalue });
+    if (
+      v_out === -5 ||
+      v_out === -8 ||
+      v_out === -15 ||
+      v_out === -9 ||
+      v_out === -10 ||
+      v_out === -12 ||
+      v_out === -18
+    ) {
+      res.render("CN79", { c_Values: calvalue });
+    } else {
+      res.render("CN337", { c_Values: calvalue });
+    }
   }
 });
 
