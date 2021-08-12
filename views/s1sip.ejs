@@ -7,6 +7,10 @@
   <link rel="stylesheet" type="text/css" href="css/style.css" />
   <link rel="stylesheet" type="text/css" href="css/animate.css" />
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css" integrity="sha384-wESLQ85D6gbsF459vf1CiZ2+rr+CsxRY0RpiF1tLlQpDnAgg6rwdsUF1+Ics2bni" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+
   <!-- Latest compiled and minified CSS -->
   <link
     rel="stylesheet"
@@ -48,6 +52,7 @@
   <script src="https://unpkg.com/aos@next/dist/aos.js" ></script>
 
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
 
     html{
@@ -115,6 +120,7 @@
     .circuits {
       padding: 100px 0px 60px;
       height: 1000px;
+      
     }
 
     .circuits h1 {
@@ -165,21 +171,7 @@
     */
     /*...........................................ourteam.........................................*/
 
-    .ourteam {
-      height: 1200px;
-      padding: 100px 0px 60px;
-      width: 100%;
-    }
-
-    .ourteam h1 {
-      font-size: 50px;
-      font-weight: bold;
-    }
-
-    .teamsetting {
-      margin-top: 70px !important;
-    }
-
+   
     /*...........................................footer.........................................*/
 
     .footer {
@@ -348,7 +340,7 @@
 
     <!--................................................circuits............................-->
 
-    <section class="container circuits text-center " data-aos="fade-right" > 
+    <div class="container circuits text-center " data-aos="fade-right" > 
       <h1 data-aos="fade-left" data-aos-offset="300" data-aos-duration="500">CIRCUITS</h1>
       <p data-aos="fade-left" data-aos-offset="300" data-aos-duration="800">Our Circuits are</p>
 
@@ -381,7 +373,7 @@
           <p></p>
         </div>
       </div>-->
-    </section>
+    </div>
 
     <!--//////////////////////////////////////////portfolio////////////////////////////////////////-->
 
@@ -464,85 +456,99 @@
 
     <!--//////////////////////////////////////////our amazing team////////////////////////////////////////-->
 
-    <section class="ourteam" id="ourteam" name="ourteam">
-      <div class="container text-center">
-        <h1>OUR AMAZING TEAM</h1>
-        <p>This is our amazing team</p>
+    <section>
+      <div class="Container">
+          <div class="card">
+              <div class="content">
+                  <div class="imgBx"><img src="ourteam/Abhishek.jpeg"></div>
+                  <div class="contentBx">
+                      <h3>Abhishek Prasad <br><span>Web designer & Developer</span></h3>
+                  </div>
+              </div>
+              <ul class="sci">
+                  <li style="--i:1">
+                      <a href="https://www.facebook.com/profile.php?id=100019162860988"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                  </li>
 
-        <div class="row teamsetting">
-          <div class="col-lg-6 col-md-6 col-sm-10 col-12 d-block m-auto">
-            <figure class="figure">
-              <img
-                src="ourteam/abhishek.jpeg"
-                class="rounded-circle"
-                alt="Cinque Terre"
-                width="250"
-                height="250"
-              />
-              <figcaption>
-                <br /><br />
-                <h4>Abhishekkumar Prasad</h4>
-                <p class="figure-caption">Web Development & Designer</p>
-              </figcaption>
-            </figure>
+                  <li style="--i:2">
+                      <a href="https://www.instagram.com/abhishekkumar3949?r=nametag"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                  </li>
+              </ul>
           </div>
 
-          <div class="col-lg-6 col-md-6 col-sm-10 col-12 d-block m-auto">
-            <figure class="figure">
-              <img
-                src="ourteam/akshay.jpg"
-                class="rounded-circle"
-                alt=""
-                width="250"
-                height="250"
-              />
-              <figcaption>
-                <br /><br />
-                <h4>Akshay Pande</h4>
-                <p class="figure-caption">Web & Database Devlopment</p>
-              </figcaption>
-            </figure>
-          </div>
-        </div>
+          <div class="card">
+              <div class="content">
+                  <div class="imgBx"><img src="ourteam/Kashif.jpeg"></div>
+                  <div class="contentBx">
+                      <h3>Kashif Hussain <br><span>Backend & Database Developer</span></h3>
+                  </div>
+              </div>
+              <ul class="sci">
+                  <li style="--i:1">
+                      <a href="https://www.facebook.com/hussain.kashif.3766"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                  </li>
 
-        <div class="row teamsetting">
-          <div class="col-lg-6 col-md-6 col-sm-10 col-12 d-block m-auto">
-            <figure class="figure">
-              <img
-                src="ourteam/Shashank.jpeg"
-                class="rounded-circle"
-                alt="Cinque Terre"
-                width="250"
-                height="250"
-              />
-              <figcaption>
-                <br /><br />
-                <h4>Shashank Nair</h4>
-                <p class="figure-caption">Simulation</p>
-              </figcaption>
-            </figure>
+                  <li style="--i:2">
+                      <a href="https://instagram.com/kashif_hussain90?utm_medium=copy_link"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                  </li>
+              </ul>
           </div>
 
-          <div class="col-lg-6 col-md-6 col-sm-10 col-12 d-block m-auto">
-            <figure class="figure">
-              <img
-                src="ourteam/Anushka.jpeg"
-                class="rounded-circle"
-                alt=""
-                width="250"
-                height="250"
-              />
-              <figcaption>
-                <br /><br />
-                <h4>Anushka Sinha</h4>
-                <p class="figure-caption">Power Electronics</p>
-              </figcaption>
-            </figure>
+          <div class="card">
+              <div class="content">
+                  <div class="imgBx"><img src="ourteam/Anushka.jpeg"></div>
+                  <div class="contentBx">
+                      <h3>Anushka Sinha <br><span>Power Electronics</span></h3>
+                  </div>
+              </div>
+              <ul class="sci">
+                  <li style="--i:1">
+                      <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                  </li>
+
+                  <li style="--i:2">
+                      <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                  </li>
+              </ul>
           </div>
-        </div>
+
+          <div class="card">
+              <div class="content">
+                  <div class="imgBx"><img src="ourteam/Shashank.jpg"></div>
+                  <div class="contentBx">
+                      <h3>Shashank Nair <br><span>Power Electronics</span></h3>
+                  </div>
+              </div>
+              <ul class="sci">
+                  <li style="--i:1">
+                      <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                  </li>
+
+                  <li style="--i:2">
+                      <a href="https://instagram.com/me_shashanknair?utm_medium=copy_link"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                  </li>
+              </ul>
+          </div>
+
+          <div class="card">
+              <div class="content">
+                  <div class="imgBx"><img src="ourteam/akshay.JPG"></div>
+                  <div class="contentBx">
+                      <h3>Akshay Pande <br><span>Former Backend Developer</span></h3>
+                  </div>
+              </div>
+              <ul class="sci">
+                  <li style="--i:1">
+                      <a href="https://www.facebook.com/akshujain555"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                  </li>
+
+                  <li style="--i:2">
+                      <a href="https://instagram.com/akshayvpande?utm_medium=copy_link"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                  </li>
+              </ul>
+          </div>
       </div>
-    </section>
-
+  </section>
     <!--//////////////////////////////////////////footer////////////////////////////////////////-->
 
     <footer class="footer">
