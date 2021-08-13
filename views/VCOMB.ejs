@@ -15,6 +15,59 @@
     margin-left:150px;
     margin-top: 20px
   }
+  .imagebox{
+     align-items: center;
+     justify-content: center;
+     margin-left: 400px;
+    }
+    .w3-container{
+      height: 100%;
+    }
+    .titlebar{
+      text-align: center;
+      padding-top: 40px;
+      padding-bottom: 40px;
+      background-color:lightgrey;
+      width: 100%;
+      overflow-x:auto;
+    }
+    .navbar{
+      width: 100%;
+    }
+
+    @media (min-width: 992px) {
+
+  }
+  @media (min-width: 768px) and (max-width: 991px) {
+  }
+  @media (min-width: 575px) and (max-width: 767px) {
+    h4 {font-size:px ;}
+    h2{font-size: px; }
+  }
+  @media (min-width: 480px) and (max-width: 574px) {
+    h4 {font-size:px ;}
+    h2{font-size: px; }
+  }
+  @media (min-width: 340px) and (max-width: 479px) {
+    h4 {font-size:px ;}
+    h2{font-size: px; }
+    h1{font-size: px;}
+  }
+  @media (min-width: 239px) and (max-width: 339px) {
+    h4 {font-size:px ;}
+    h2{font-size: px; }
+    h1{font-size: px;}
+  }
+  @media (min-width: 180px) and (max-width: 238px) {
+    h4 {font-size:px ;}
+    h2{font-size: px; }
+    h1{font-size: px;}
+  }
+  @media (max-width: 179px) {
+    h4 {font-size:px ;}
+    h2{font-size: px; }
+    h1{font-size: px;}
+  }
   </style>
  <body>
     <div class="jumbotron text-center" style="margin-bottom:0">
@@ -23,6 +76,7 @@
     </div>
     <div>
     <nav class="navbar navbar-expand-sm aa bg-primary navbar-dark ">
+      <button class="w3-button text-white w3-xlarge" onclick="w3_open()">☰</button>
       <ul class="navbar-nav ml-auto">
           <li class="nav-item">
             <a class="nav-link text-white" href="#">BACK</a>
@@ -35,7 +89,8 @@
     </div>
 
    <!-- Sidebar -->
-   <div class="w3-container list-group-item list-group-item-" style="width:25%">
+   <div class="w3-sidebar w3-light-grey w3-bar-block w3-border-right" style="display:none" id="mySidebar">
+    <button onclick="w3_close()" class="w3-bar-item w3-large">CLOSE &times;</button>
       <div class="list-group-item list-group-item-">
         <center><h2>USER'S INPUT</h2></center>
       </div>
@@ -92,16 +147,16 @@
    </div>
 
     <!-- Page Content -->
-    <div style="margin-left:25%">
+    <div class="">
 
       <div class="w3-container">
         <h1></h1>
       </div>
 
-      <div class="container border">
+      <div class="imagebox">
         <br><br>
 
-        <img src="C:\cir\cir\VCOMB..png" alt="Workplace" usemap="#workmap" width="1124" height="591">
+        <img src="/circuita/VCOMB.png" alt="Workplace" usemap="#workmap" width="1124" height="591">
         <map name="workmap">
 
           <area shape="rect" coords="185,58,250,135"    href="#" data-placement="top"  data-toggle="popover"  data-trigger="focus" title="Diode 1: 1N5401">
@@ -111,23 +166,23 @@
           <area shape="rect" coords="595,0,650,64"      href="#" data-placement="top"  data-toggle="popover"  data-trigger="focus" title="Diode 5: 1N5401">
           <area shape="rect" coords="598,520,653,589"   href="#" data-placement="top"  data-toggle="popover"  data-trigger="focus" title="Diode 6: 1N5401">
 
-          <area shape="rect" coords="703,112,765,175"   href="#" data-placement="top"  data-toggle="popover"  data-trigger="focus" title="Resistor 1" >
-          <area shape="rect" coords="695,200,772,260"   href="#" data-placement="top"  data-toggle="popover"  data-trigger="focus" title="Resistor 2" >
-          <area shape="rect" coords="695,310,765,376"   href="#" data-placement="top"  data-toggle="popover"  data-trigger="focus" title="Resistor 3" >
-          <area shape="rect" coords="704,400,769,465"   href="#" data-placement="top"  data-toggle="popover"  data-trigger="focus" title="Resistor 4" >
+          <area shape="rect" coords="703,112,765,175"   href="#" data-placement="top"  data-toggle="popover"  data-trigger="focus" title="Resistor 1: <%=c_Values.R2>">
+          <area shape="rect" coords="695,200,772,260"   href="#" data-placement="top"  data-toggle="popover"  data-trigger="focus" title="Resistor 2: 120 ohm" >
+          <area shape="rect" coords="695,310,765,376"   href="#" data-placement="top"  data-toggle="popover"  data-trigger="focus" title="Resistor 3: 120 ohm" >
+          <area shape="rect" coords="704,400,769,465"   href="#" data-placement="top"  data-toggle="popover"  data-trigger="focus" title="Resistor 4: <%=c_Values.R2%>">
 
           <area shape="rect" coords="329,165,385,232"   href="#" data-placement="top"  data-toggle="popover"  data-trigger="focus" title="Capacitor 1: <%=c_Values.c%> micro-farad">
-          <area shape="rect" coords="328,357,388,426"   href="#" data-placement="top"  data-toggle="popover"  data-trigger="focus" title="Capacitor 2: micro-farad">
-          <area shape="rect" coords="413,164,467,231"   href="#" data-placement="top"  data-toggle="popover"  data-trigger="focus" title="Capacitor 3  micro-farad">
-          <area shape="rect" coords="412,357,470,422"   href="#" data-placement="top"  data-toggle="popover"  data-trigger="focus" title="Capacitor 4  micro-farad">
-          <area shape="rect" coords="477,163,530,229"   href="#" data-placement="top"  data-toggle="popover"  data-trigger="focus" title="Capacitor 5  micro-farad">
-          <area shape="rect" coords="476,357,535,422"   href="#" data-placement="top"  data-toggle="popover"  data-trigger="focus" title="Capacitor 6  micro-farad">
-          <area shape="rect" coords="601,201,663,263"   href="#" data-placement="top"  data-toggle="popover"  data-trigger="focus" title="Capacitor 7: micro-farad">
-          <area shape="rect" coords="599,327,662,385"   href="#" data-placement="top"  data-toggle="popover"  data-trigger="focus" title="Capacitor 8: micro-farad">
-          <area shape="rect" coords="805,164,865,231"   href="#" data-placement="top"  data-toggle="popover"  data-trigger="focus" title="Capacitor 9: micro-farad">
-          <area shape="rect" coords="804,356,865,424"   href="#" data-placement="top"  data-toggle="popover"  data-trigger="focus" title="Capacitor 10: micro-farad">
+          <area shape="rect" coords="328,357,388,426"   href="#" data-placement="top"  data-toggle="popover"  data-trigger="focus" title="Capacitor 2: <%=c_Values.c%> micro-farad">
+          <area shape="rect" coords="413,164,467,231"   href="#" data-placement="top"  data-toggle="popover"  data-trigger="focus" title="Capacitor 3    micro-farad">
+          <area shape="rect" coords="412,357,470,422"   href="#" data-placement="top"  data-toggle="popover"  data-trigger="focus" title="Capacitor 4   0.1 micro-farad">
+          <area shape="rect" coords="477,163,530,229"   href="#" data-placement="top"  data-toggle="popover"  data-trigger="focus" title="Capacitor 5   micro-farad">
+          <area shape="rect" coords="476,357,535,422"   href="#" data-placement="top"  data-toggle="popover"  data-trigger="focus" title="Capacitor 6   10 micro-farad">
+          <area shape="rect" coords="601,201,663,263"   href="#" data-placement="top"  data-toggle="popover"  data-trigger="focus" title="Capacitor 7:  micro-farad">
+          <area shape="rect" coords="599,327,662,385"   href="#" data-placement="top"  data-toggle="popover"  data-trigger="focus" title="Capacitor 8:  10 micro-farad">
+          <area shape="rect" coords="805,164,865,231"   href="#" data-placement="top"  data-toggle="popover"  data-trigger="focus" title="Capacitor 9:  micro-farad">
+          <area shape="rect" coords="804,356,865,424"   href="#" data-placement="top"  data-toggle="popover"  data-trigger="focus" title="Capacitor 10: 10 micro-farad">
           <area shape="rect" coords="883,164,945,230"   href="#" data-placement="top"  data-toggle="popover"  data-trigger="focus" title="Capacitor 11: micro-farad">
-          <area shape="rect" coords="882,358,950,423"   href="#" data-placement="top"  data-toggle="popover"  data-trigger="focus" title="Capacitor 12: micro-farad">
+          <area shape="rect" coords="882,358,950,423"   href="#" data-placement="top"  data-toggle="popover"  data-trigger="focus" title="Capacitor 12: 10 micro-farad">
           
           <area shape="rect" coords="68,182,138,370"    href="#" data-placement="top"  data-toggle="popover"  data-trigger="focus" title="Transformer: <%=c_Values.v_a%> VA">
 
@@ -147,5 +202,16 @@
         </map>
       </div>
     </div>
+    <script>
+      function w3_open()
+      {
+        document.getElementById("mySidebar").style.width = "25%";
+        document.getElementById("mySidebar").style.display = "block";
+      }
+ 
+       function w3_close() {
+        document.getElementById("mySidebar").style.display = "none";
+       }
+    </script>
   </body>
 </html>
