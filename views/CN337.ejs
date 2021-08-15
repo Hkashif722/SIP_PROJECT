@@ -37,37 +37,95 @@
 
     @media (min-width: 992px) {
 
-  }
-  @media (min-width: 768px) and (max-width: 991px) {
-  }
-  @media (min-width: 575px) and (max-width: 767px) {
-    h4 {font-size:px ;}
-    h2{font-size: px; }
-  }
-  @media (min-width: 480px) and (max-width: 574px) {
-    h4 {font-size:px ;}
-    h2{font-size: px; }
-  }
-  @media (min-width: 340px) and (max-width: 479px) {
-    h4 {font-size:px ;}
-    h2{font-size: px; }
-    h1{font-size: px;}
-  }
-  @media (min-width: 239px) and (max-width: 339px) {
-    h4 {font-size:px ;}
-    h2{font-size: px; }
-    h1{font-size: px;}
-  }
-  @media (min-width: 180px) and (max-width: 238px) {
-    h4 {font-size:px ;}
-    h2{font-size: px; }
-    h1{font-size: px;}
-  }
-  @media (max-width: 179px) {
-    h4 {font-size:px ;}
-    h2{font-size: px; }
-    h1{font-size: px;}
-  }
+    }
+    @media (min-width: 768px) and (max-width: 991px) {
+      .imagebox{
+          margin-left: 0;
+          overflow: scroll;
+        }
+        h2{
+          font-size: 20px;
+        }
+        h1{
+          font-size: 25px;
+        }
+        h2{
+          font-size: 20px;
+        }
+        h4{
+          font-size: 15px;
+        }
+    }
+    @media (min-width: 575px) and (max-width: 767px) {
+      .imagebox{
+          margin-left: 0;
+          overflow: scroll;
+        }
+        h1{
+          font-size: 25px;
+        }
+        h2{
+          font-size: 18px;
+        }
+        h4{
+          font-size: 14px;
+        }
+    }
+    @media (min-width: 480px) and (max-width: 575px) {
+      .imagebox{
+          margin-left: 0;
+          overflow: scroll;
+        }
+        h1{
+          font-size: 20px;
+        }
+        h2{
+          font-size: 14px;
+        }
+        h4{
+          font-size: 12px;
+        }
+        .nav-item a{
+          text-align:center;
+        }
+      
+    }
+    @media (min-width: 340px) and (max-width: 480px) {
+      .imagebox{
+          margin-left: 0;
+          overflow: scroll;
+        }
+        h1{
+          font-size: 15px;
+        }
+        h2{
+          font-size: 8px;
+        }
+        h4{
+          font-size: 10px;
+        }
+        .nav-item a{
+          text-align:center;
+        }
+    }
+    @media (min-width: 239px) and (max-width: 339px) {
+      .imagebox{
+          margin-left: 0;
+          overflow: scroll;
+        }
+    }
+    @media (min-width: 180px) and (max-width: 238px) {
+        .imagebox{
+          margin-left: 0;
+          overflow: scroll;
+        }
+    }
+    @media (max-width: 179px) {
+        .imagebox{
+          margin-left: 0;
+          overflow: scroll;
+        }
+    }
   </style>
   <body>
     <div class="jumbotron text-center" style="margin-bottom:0">
@@ -95,7 +153,6 @@
       <div class="list-group-item list-group-item- ">
         <center><h2>USER INPUT</h2></center>
       </div>
-
       <form class="w3-container">
         <fieldset disabled>
           <div class="form-group">
