@@ -62,9 +62,10 @@ app.get("/", (req, res) => {
 app.post("/input", (req, res) => {
   let value = req.body;
   let calValue = varCalc.variable(value.v1, value.v2, value.v3, value.v4, value.v5);
-  if (calValue.vout > 0 && calValue.voutTo > 0) res.render("VP317", { v1: calValue });
+  console.log(calValue);
+  if (calValue.vout > 0 && calValue.voutTo > 0) res.render("VP317", { c_Values: calValue });
   else if (calValue.vout < 0 && calValue.voutTo < 0) res.render("VN337");
-  else res.render("VCOMB");
+  else res.render("VCOMB", { c_Values: calValue });
 });
 
 app.post("/inputa", (req, res) => {
