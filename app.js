@@ -80,7 +80,7 @@ app.post("/input", async (req, res) => {
   }
 });
 
-app.post("/inputa", (req, res) => {
+app.post("/inputa", async (req, res) => {
   let value = req.body;
   let calvalue = constCalc.constant(value.c1, value.c2, value.c3, value.c4);
   let v_out = calvalue.vout;
@@ -98,8 +98,12 @@ app.post("/inputa", (req, res) => {
       v_out === 18 ||
       v_out === 24
     ) {
+      let c = await rel_Value.relativeValue(calvalue.c);
+      calvalue.c = c;
       res.render("CP78", { c_Values: calvalue });
     } else {
+      let c = await rel_Value.relativeValue(calvalue.c);
+      calvalue.c = c;
       res.render("CP317", { c_Values: calvalue });
     }
   } else {
@@ -112,8 +116,12 @@ app.post("/inputa", (req, res) => {
       v_out === -12 ||
       v_out === -18
     ) {
+      let c = await rel_Value.relativeValue(calvalue.c);
+      calValue.c = c;
       res.render("CN79", { c_Values: calvalue });
     } else {
+      let c = await rel_Value.relativeValue(calValue.c);
+      calValue.c = c;
       res.render("CN337", { c_Values: calvalue });
     }
   }
@@ -160,6 +168,6 @@ app.get("/logout", (req, res) => {
   res.redirect("/");
 });
 
-app.listen("3000", () => {
+app.listen("3001", () => {
   console.log("server is up and running");
 });
