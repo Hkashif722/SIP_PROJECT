@@ -1,266 +1,260 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
-    rel="stylesheet"
-    href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css"
-    integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX"
-    crossorigin="anonymous"/>
-  
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css" integrity="sha384-wESLQ85D6gbsF459vf1CiZ2+rr+CsxRY0RpiF1tLlQpDnAgg6rwdsUF1+Ics2bni" crossorigin="anonymous">
-	<title>Circuitation</title>
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css"
+      integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/fontawesome.min.css"
+      integrity="sha384-wESLQ85D6gbsF459vf1CiZ2+rr+CsxRY0RpiF1tLlQpDnAgg6rwdsUF1+Ics2bni"
+      crossorigin="anonymous"
+    />
+    <title>Circuitation</title>
     <style>
-        body{
-            margin-top: 0;
-        }
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
-        html{
-         scroll-behavior:smooth;
-        }
-        .first
-        {
-           position: relative;
-           width: 100%;
-           height: 1000px;
-           background:url(/home/bg3.jpeg);
-           background-size: cover;
-           background-position: center;
-           display: flex;
-           justify-content: flex-start;
-           align-items: center; 
-           padding-left: 700px;
-        }
-        header{
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            padding: 30px 250px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        header .logo{
-            position: relative;
-            font-size: 2em;
-            color: #fff;
-            text-transform: uppercase;
-            font-weight: 700;
-            text-decoration: none;
-            letter-spacing: 1px;
-        }
-        header .navigation{
-           position: relative;
-           display: flex; 
-        }
-        header .navigation li
-        {
-            list-style: none;
-        }
-        header .navigation li a{
-            display: inline-block;
-            color: #fff;
-            margin-right: 40px;
-            text-decoration: none;
-        }
-        header .navigation li a:hover{
-            color: #03a9f4;
-        }
-        .content{
-            max-width: 600px;
-            text-align: center;
-        }
-        .content .contentAx h2{
-           font-size:2em ; 
-           color: #fff;
-           line-height: 1.5em;
-           text-align: center;
-           
-        }
-        .content .contentAx h1{
-           font-size:5em ; 
-           color: #fff;
-           line-height: 1.5em;
-           text-align: center;
-        }
-        .content .contentAx h4{
-           font-size:1.5em ; 
-           color: #fff;
-           line-height: 1.5em;
-           text-align: center;
-        }
-        .content .contentAx p{
-           font-size:1.5em ; 
-           color:lightgrey;
-           font-weight: 300;
-           margin: 20px 0;
-           text-align: center;
-        }
-        .content .contentAx a{
-            display: inline-block;
-            padding: 30px 30px;
-            background: rgb(68, 67, 67);;
-            color: #fff;
-            text-decoration: none;
-            font-size: 20px;
-            font-weight: 700;
-            letter-spacing: 1px;
-        }
-        .content .contentAx a{
-            opacity: 0.2;
-            color: #fff;
-        }
-        .content .contentAx a:hover{
-            color:#03a9f4 ;
-            opacity: 1;
-        }
-        .sci{
-            position: absolute;
-            bottom: 30px;
-            display: flex;
-            margin-left: 275px;
-        }
-        .sci li{
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .sci li a{
-            position: relative;
-            display: inline-block;
-            margin-right: 20px;
-            filter: invert(1);
-            transform: scale(0.5);
-        }
-
-        /*
-    ................................circuits......................*/
-
- body 
- {
-    display: block;
-    justify-content: center;
-    align-items: center;
-    background: rgb(32, 31, 31);
-    min-height: 2000px;
- }
-.Container
-  {
-      width: 1100px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      margin-left: 450px;
-      margin-top: 150px;
-      margin-bottom: 400px;
-  }
-.Container .Card
-{
-    position: relative;
-    width: 400px;
-    height: 600px;
-    background-color: rgb(51, 50, 50);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 30px;
-    box-shadow:0 20px 50px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-}
-.Container:hover .Card
-{
-    opacity: 0.2;
-}
-.Container .Card:hover
-{
-    opacity: 1;
-}
-.Container .Card::before
-{
-    content: '';
-    position: absolute;
-    top:2px;
-    left:2px;
-    bottom:2px;
-    width: 50%;
-    background: rgba(255, 255, 255, 0.1);
-    pointer-events: none;
-}
-  .Container .Card .Content
-  {
-      padding: 30px;
-      text-align: center;
-  }
-  .Container .Card .Content h2
-  {
-     position: absolute;
-     right:30px;
-     font-size: 4em;
-     font-weight: 800;
-     color: #1779ff; 
-     z-index: 1;
-     opacity: 0.1;
-     transition: 0.5s;
-  }
-  .Container .Card:hover .Content h2
-  {
-      opacity: 1;
-      transform: translateY(-70px);
-  }
-  .Container .Card .Content h3{
-      position: relative;
-      font-size: 1.5em;
-      color: #fff;
-      z-index: 2;
-      opacity: 0.5;
-      letter-spacing: 1px;
-      transition: 0.5s;
-  }
-  .Container .Card .Content p{
-    position: relative;
-    font-size: 1.4em;
-    color: #fff;
-    z-index: 2;
-    opacity: 0.5;
-    font-weight:50;
-    letter-spacing: 1px;
-    transition: 0.5s;
-}
-   .Container .Card:hover .Content h3,
-   .Container .Card:hover .Content p
-   {
-      opacity: 1;
-   }
-   .Container .Card .Content a{
-      display: inline-block;
-      margin-top: 15px;
-      padding: 8px 15px;
-      background: #fff;
-      color: #0c002b;
-      text-decoration: none;
-      text-transform: uppercase;
-      font-weight: 600;
-    }
-    .Container .Card span{
-      transition: 0.5;
-      opacity: 0;
-    }
-    .Container .Card:hover span{
-        
+      body {
+        margin-top: 0;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      .first {
+        position: relative;
+        width: 100%;
+        height: 1000px;
+        background: url(/home/bg3.jpeg);
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding-left: 700px;
+      }
+      header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 30px 250px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      header .logo {
+        position: relative;
+        font-size: 2em;
+        color: #fff;
+        text-transform: uppercase;
+        font-weight: 700;
+        text-decoration: none;
+        letter-spacing: 1px;
+      }
+      header .navigation {
+        position: relative;
+        display: flex;
+      }
+      header .navigation li {
+        list-style: none;
+      }
+      header .navigation li a {
+        display: inline-block;
+        color: #fff;
+        margin-right: 40px;
+        text-decoration: none;
+      }
+      header .navigation li a:hover {
+        color: #03a9f4;
+      }
+      .content {
+        max-width: 600px;
+        text-align: center;
+      }
+      .content .contentAx h2 {
+        font-size: 2em;
+        color: #fff;
+        line-height: 1.5em;
+        text-align: center;
+      }
+      .content .contentAx h1 {
+        font-size: 5em;
+        color: #fff;
+        line-height: 1.5em;
+        text-align: center;
+      }
+      .content .contentAx h4 {
+        font-size: 1.5em;
+        color: #fff;
+        line-height: 1.5em;
+        text-align: center;
+      }
+      .content .contentAx p {
+        font-size: 1.5em;
+        color: lightgrey;
+        font-weight: 300;
+        margin: 20px 0;
+        text-align: center;
+      }
+      .content .contentAx a {
+        display: inline-block;
+        padding: 30px 30px;
+        background: rgb(68, 67, 67);
+        color: #fff;
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: 700;
+        letter-spacing: 1px;
+      }
+      .content .contentAx a {
+        opacity: 0.2;
+        color: #fff;
+      }
+      .content .contentAx a:hover {
+        color: #03a9f4;
         opacity: 1;
       }
-    .Container .Card span:nth-child(1)
-    {
+      .sci {
+        position: absolute;
+        bottom: 30px;
+        display: flex;
+        margin-left: 275px;
+      }
+      .sci li {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .sci li a {
+        position: relative;
+        display: inline-block;
+        margin-right: 20px;
+        filter: invert(1);
+        transform: scale(0.5);
+      }
+
+      /*
+    ................................circuits......................*/
+
+      body {
+        display: block;
+        justify-content: center;
+        align-items: center;
+        background: rgb(32, 31, 31);
+        min-height: 2000px;
+      }
+      .Container {
+        width: 1100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-left: 450px;
+        margin-top: 150px;
+        margin-bottom: 400px;
+      }
+      .Container .Card {
+        position: relative;
+        width: 400px;
+        height: 600px;
+        background-color: rgb(51, 50, 50);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 30px;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+      }
+      .Container:hover .Card {
+        opacity: 0.2;
+      }
+      .Container .Card:hover {
+        opacity: 1;
+      }
+      .Container .Card::before {
+        content: "";
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        bottom: 2px;
+        width: 50%;
+        background: rgba(255, 255, 255, 0.1);
+        pointer-events: none;
+      }
+      .Container .Card .Content {
+        padding: 30px;
+        text-align: center;
+      }
+      .Container .Card .Content h2 {
+        position: absolute;
+        right: 30px;
+        font-size: 4em;
+        font-weight: 800;
+        color: #1779ff;
+        z-index: 1;
+        opacity: 0.1;
+        transition: 0.5s;
+      }
+      .Container .Card:hover .Content h2 {
+        opacity: 1;
+        transform: translateY(-70px);
+      }
+      .Container .Card .Content h3 {
+        position: relative;
+        font-size: 1.5em;
+        color: #fff;
+        z-index: 2;
+        opacity: 0.5;
+        letter-spacing: 1px;
+        transition: 0.5s;
+      }
+      .Container .Card .Content p {
+        position: relative;
+        font-size: 1.4em;
+        color: #fff;
+        z-index: 2;
+        opacity: 0.5;
+        font-weight: 50;
+        letter-spacing: 1px;
+        transition: 0.5s;
+      }
+      .Container .Card:hover .Content h3,
+      .Container .Card:hover .Content p {
+        opacity: 1;
+      }
+      .Container .Card .Content a {
+        display: inline-block;
+        margin-top: 15px;
+        padding: 8px 15px;
+        background: #fff;
+        color: #0c002b;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 600;
+      }
+      .Container .Card span {
+        transition: 0.5;
+        opacity: 0;
+      }
+      .Container .Card:hover span {
+        opacity: 1;
+      }
+      .Container .Card span:nth-child(1) {
         position: absolute;
         top: 0;
         left: 0;
@@ -268,21 +262,17 @@
         height: 3px;
         background: linear-gradient(to right, transparent, #1779ff);
         animation: animate1 2s linear infinite;
-    }
-    @keyframes animate1
-    {
-        0%
-        {
-            transform: translate(-100%);
+      }
+      @keyframes animate1 {
+        0% {
+          transform: translate(-100%);
         }
-        100%
-        {
-            transform: translate(100%);
+        100% {
+          transform: translate(100%);
         }
-    }
+      }
 
-    .Container .Card span:nth-child(2)
-    {
+      .Container .Card span:nth-child(2) {
         position: absolute;
         top: 0;
         right: 0;
@@ -291,21 +281,17 @@
         background: linear-gradient(to bottom, transparent, #1779ff);
         animation: animate2 2s linear infinite;
         animation-delay: 1s;
-    }
-    @keyframes animate2
-    {
-        0%
-        {
-            transform: translateY(-100%);
+      }
+      @keyframes animate2 {
+        0% {
+          transform: translateY(-100%);
         }
-        100%
-        {
-            transform: translateY(100%);
+        100% {
+          transform: translateY(100%);
         }
-    }
+      }
 
-    .Container .Card span:nth-child(3)
-    {
+      .Container .Card span:nth-child(3) {
         position: absolute;
         bottom: 0;
         left: 0;
@@ -314,21 +300,17 @@
         background: linear-gradient(to left, transparent, #1779ff);
         animation: animate3 2s linear infinite;
         animation-delay: 1s;
-    }
-    @keyframes animate3
-    {
-        0%
-        {
-            transform: translateX(100%);
+      }
+      @keyframes animate3 {
+        0% {
+          transform: translateX(100%);
         }
-        100%
-        {
-            transform: translateX(-100%);
+        100% {
+          transform: translateX(-100%);
         }
-    }
+      }
 
-    .Container .Card span:nth-child(4)
-    {
+      .Container .Card span:nth-child(4) {
         position: absolute;
         top: 0;
         left: 0;
@@ -337,1268 +319,1220 @@
         background: linear-gradient(to top, transparent, #1779ff);
         animation: animate4 2s linear infinite;
         animation-delay: 1s;
-    }
-    @keyframes animate4
-    {
-        0%
-        {
-            transform: translateY(100%);
+      }
+      @keyframes animate4 {
+        0% {
+          transform: translateY(100%);
         }
-        100%
-        {
-            transform: translateY(-100%);
+        100% {
+          transform: translateY(-100%);
         }
-    }
+      }
 
-/*
+      /*
     ................................Our Team......................*/
- body
-{
-    
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    background: rgb(32, 31, 31);
-    height: 800px;
-}
-section
-{
-    position: relative;
-}
-section::before
-{
-    content: '';
-    position: absolute;
-    top: 30%;
-    left: 5%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(#f00, #f0f);
-    clip-path: circle(30% at right 70%);
-}
-section::after
-{
-    content: '';
-    position: absolute;
-    top: -35%;
-    left: -5%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(#2196f3, #e91e63);
-    clip-path: circle(20% at 10% 20%);
-}
+      body {
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        background: rgb(32, 31, 31);
+        height: 800px;
+      }
+      section {
+        position: relative;
+      }
+      section::before {
+        content: "";
+        position: absolute;
+        top: 30%;
+        left: 5%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(#f00, #f0f);
+        clip-path: circle(30% at right 70%);
+      }
+      section::after {
+        content: "";
+        position: absolute;
+        top: -35%;
+        left: -5%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(#2196f3, #e91e63);
+        clip-path: circle(20% at 10% 20%);
+      }
 
-.Containers
-{
-    position: relative;
-    z-index: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    margin: 40px 0;
-    height: 600px;
-}
+      .Containers {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 40px 0;
+        height: 600px;
+      }
 
-.Containers .Cards
-{
-    position: relative;
-    width: 300px;
-    height: 400px;
-    background: rgba(255, 255, 255, 0.05);
-    margin: 20px;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-    border-radius: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    backdrop-filter: blur(10px);
-}
+      .Containers .Cards {
+        position: relative;
+        width: 300px;
+        height: 400px;
+        background: rgba(255, 255, 255, 0.05);
+        margin: 20px;
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        border-radius: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        backdrop-filter: blur(10px);
+      }
 
-.Containers .Cards .contents
-{
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    opacity: 0.5;
-    transition: 0.5s;
-}
+      .Containers .Cards .contents {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        opacity: 0.5;
+        transition: 0.5s;
+      }
 
-.Containers .Cards:hover .contents
-{
-    opacity: 1;
-    transform: translateY(-20px);
-}
+      .Containers .Cards:hover .contents {
+        opacity: 1;
+        transform: translateY(-20px);
+      }
 
-.Containers .Cards .contents .imgBx
-{
-    position: relative;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    overflow: hidden;
-    border: 10px solid rgba(0, 0, 0, 0.25);
-}
+      .Containers .Cards .contents .imgBx {
+        position: relative;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 10px solid rgba(0, 0, 0, 0.25);
+      }
 
-.Containers .Cards .contents .imgBx img
-{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
+      .Containers .Cards .contents .imgBx img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
 
-.Containers .Cards .contents .contentBx h3
-{
-    color: #fff;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-weight: 500;
-    font-size: 18px;
-    text-align: center;
-    margin: 20px 0 10px;
-    line-height: 1.1em;
-}
-.Containers .Cards .contents .contentBx h3 span
-{
-    font-size: 12px;
-    font-weight: 300;
-    text-transform: initial;
-}
-.Containers .Cards .scii 
-{
-    position: absolute;
-    bottom: 50px;
-    display: flex;
-}
-.Containers .Cards .scii li
-{
-    list-style: none;
-    margin: 0 10px;
-    transform: translateY(40px);
-    transition: 0.5s;
-    opacity: 0;
-    transition-delay: calc(0.1 * var(--i));
-}
-.Containers .Cards:hover .scii li
-{
-    transform: translateY(0px);
-    opacity: 1;
-}
+      .Containers .Cards .contents .contentBx h3 {
+        color: #fff;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: 500;
+        font-size: 18px;
+        text-align: center;
+        margin: 20px 0 10px;
+        line-height: 1.1em;
+      }
+      .Containers .Cards .contents .contentBx h3 span {
+        font-size: 12px;
+        font-weight: 300;
+        text-transform: initial;
+      }
+      .Containers .Cards .scii {
+        position: absolute;
+        bottom: 50px;
+        display: flex;
+      }
+      .Containers .Cards .scii li {
+        list-style: none;
+        margin: 0 10px;
+        transform: translateY(40px);
+        transition: 0.5s;
+        opacity: 0;
+        transition-delay: calc(0.1 * var(--i));
+      }
+      .Containers .Cards:hover .scii li {
+        transform: translateY(0px);
+        opacity: 1;
+      }
 
-.Containers .Cards .scii li a
-{
-    color: #fff;
-    font-size: 24px;
-
-}
-@media (min-width: 1901px) and (max-width: 2100px)
-{
-    header{
-                padding: 25px 40px;
-            }
-            header .logo{
-                font-size: 20px;
-            }
-            header .navigation li a{
-            margin-right: 40px;
-            padding-right: 40px;
-            font-size: 22px;
+      .Containers .Cards .scii li a {
+        color: #fff;
+        font-size: 24px;
+      }
+      @media (min-width: 1901px) and (max-width: 2100px) {
+        header {
+          padding: 25px 40px;
         }
-            .first{
-                padding-left: 700px;
-                padding-bottom: 400px;
-            
-             }
-             .content .contentAx{
-                margin-top: 400px;
-            }
-            .content .contentAx h2{
-                font-size: 1.5em;
-            }
-            .content .contentAx h1{
-                font-size: 4.5em;
-            }
-            .content .contentAx h4{
-                font-size: 1.5em;
-            }
-            .content .contentAx p{
-                font-size: 1.3em;
-            }
-            .content .contentAx a{
-                padding: 25px 25px;
-                font-size: 20px;
-                font-weight: 700;
-                letter-spacing: 3px;
-                margin-left: 0;
-            }
-            
-            /*.................Circuit..................*/
-            .Container {
-                width:auto;
-                align-items: center;
-                margin-left: 0;
-            }
-            .Container .Card{
-                align-items: center;
-                width: 450px;
-                height: 600px;
-               }
-
-            /*.................Our Team..................*/   
-           
-            section::before
-            {
-                clip-path: circle(30% at right 80%);
-                top: 35%;
-                left: 0%;
-            }
-            section::after
-            {
-                top: -30%;
-                left: -5%;
-            }
-}
-
-@media (min-width: 1701px) and (max-width: 1900px)
-{
-             header{
-                padding: 25px 40px;
-            }
-            header .logo{
-                font-size: 20px;
-            }
-            header .navigation li a{
-            margin-right: 40px;
-            padding-right: 40px;
-            font-size: 22px;
+        header .logo {
+          font-size: 20px;
         }
-            .first{
-                padding-left: 600px;
-                padding-bottom: 400px;
-            
-             }
-             .content .contentAx{
-                margin-top: 400px;
-            }
-            .content .contentAx h2{
-                font-size: 1.5em;
-            }
-            .content .contentAx h1{
-                font-size: 4.5em;
-            }
-            .content .contentAx h4{
-                font-size: 1.5em;
-            }
-            .content .contentAx p{
-                font-size: 1.3em;
-            }
-            .content .contentAx a{
-                padding: 25px 25px;
-                font-size: 20px;
-                font-weight: 700;
-                letter-spacing: 3px;
-                margin-left: 0;
-            }
-            
-            /*.................Circuit..................*/
-            .Container {
-                width:auto;
-                align-items: center;
-                margin-left: 0;
-            }
-            .Container .Card{
-                align-items: center;
-                width: 450px;
-                height: 600px;
-               }
-
-            /*.................Our Team..................*/   
-           
-            section::before
-            {
-                clip-path: circle(30% at right 80%);
-                top: 35%;
-                left: 0%;
-            }
-            section::after
-            {
-                top: -30%;
-                left: -5%;
-            }
-}
-@media (min-width: 1501px) and (max-width: 1700px)
-{
-            header{
-                padding: 25px 40px;
-            }
-            header .logo{
-                font-size: 20px;
-            }
-            .first{
-                padding-left: 500px;
-                padding-bottom: 400px;
-            
-             }
-             .content .contentAx{
-                margin-top: 400px;
-            }
-            .content .contentAx h2{
-                font-size: 1.3em;
-            }
-            .content .contentAx h1{
-                font-size: 4em;
-            }
-            .content .contentAx h4{
-                font-size: 1.3em;
-            }
-            .content .contentAx p{
-                font-size: 1.1em;
-            }
-            .content .contentAx a{
-                padding: 20px 20px;
-                font-size: 20px;
-                font-weight: 700;
-                letter-spacing: 3px;
-                margin-left: 0;
-            }
-            
-            /*.................Circuit..................*/
-            .Container {
-                width:auto;
-                align-items: center;
-                margin-left: 00px;
-            }
-            .Container .Card{
-                align-items: center;
-                width: 400px;
-                height: 600px;
-               }
-
-            /*.................Our Team..................*/   
-           
-            section::before
-            {
-                clip-path: circle(30% at right 80%);
-                top: 85%;
-                left: 0%;
-            }
-            section::after
-            {
-                top: -10%;
-                left: -5%;
-            }
-}
-
-@media (min-width: 1301px) and (max-width: 1500px)
-        {
-            header{
-                padding: 25px 40px;
-            }
-            header .logo{
-                font-size: 20px;
-            }
-            .first{
-            padding-left: 400px;
-            padding-bottom: 400px;
-            
-             }
-             .content .contentAx{
-                margin-top: 400px;
-            }
-            .content .contentAx h2{
-                font-size: 1em;
-            }
-            .content .contentAx h1{
-                font-size: 3em;
-            }
-            .content .contentAx h4{
-                font-size: 1.2em;
-            }
-            .content .contentAx p{
-                font-size: 1em;
-            }
-            .content .contentAx a{
-            padding: 20px 20px;
-            font-size: 20px;
-            font-weight: 700;
-            letter-spacing: 3px;
-            margin-left: 0;
+        header .navigation li a {
+          margin-right: 40px;
+          padding-right: 40px;
+          font-size: 22px;
         }
-            
-            /*.................Circuit..................*/
-            .Container {
-                width:auto;
-                align-items: center;
-                margin-left: 00px;
-            }
-            .Container .Card{
-                align-items: center;
-                width: 400px;
-                height: 600px;
-               }
-
-            /*.................Our Team..................*/   
-           
-            section::before
-            {
-                clip-path: circle(30% at right 80%);
-                top: 85%;
-                left: 0%;
-            }
-            section::after
-            {
-                top: -10%;
-                left: -5%;
-            }
+        .first {
+          padding-left: 700px;
+          padding-bottom: 400px;
         }
-        @media (min-width: 1101px) and (max-width: 1300px)
-        {
-            header{
-                padding: 30px 40px;
-            }
-            header .logo{
-                font-size: 20px;
-            }
-           
-            .first{
-            padding-left: 300px;
-            padding-bottom: 450px;
-             }
-             .content .contentAx{
-                margin-top: 400px;
-            }
-            .content .contentAx h2{
-                font-size: 1em;
-            }
-            .content .contentAx h1{
-                font-size: 3em;
-            }
-            .content .contentAx h4{
-                font-size: 1.2em;
-            }
-            .content .contentAx p{
-                font-size: 1em;
-            }
-            .content .contentAx a{
-            padding: 20px 20px;
-            font-size: 20px;
-            font-weight: 700;
-            letter-spacing: 3px;
-            margin-left: 0;
+        .content .contentAx {
+          margin-top: 400px;
         }
-            /*.................Circuit..................*/
-            .Container {
-                width:auto;
-                align-items: center;
-                margin-left: 40px;
-            }
-            .Container .Card{
-                align-items: center;
-                width: 400px;
-                height: 600px;
-               }
-
-            /*.................Our Team..................*/   
-            .Containers .Cards
-            {
-                position: relative;
-                width: 300px;
-                height: 400px;
-                margin: 30px;
-                border-radius: 15px;
-            }
-
-            .Containers {
-                height:100%;
-                width: 100%;
-            
-            }
-            section::before
-            {
-                top: 30%;
-                left:-13%;
-            }
-            section::after
-            {
-                top: -10%;
-                left: -8%;
-            }
-
-        } 
-        @media (min-width: 992px) and (max-width: 1100px)
-        {
-            header{
-                padding: 30px 40px;
-            }
-            header .logo{
-                font-size: 20px;
-            }
-           
-            .first{
-            padding-left: 200px;
-            padding-bottom: 400px;
-             }
-             .content .contentAx{
-                margin-top: 400px;
-            }
-            .content .contentAx h2{
-                font-size: 1em;
-            }
-            .content .contentAx h1{
-                font-size: 3em;
-            }
-            .content .contentAx h4{
-                font-size: 1.2em;
-            }
-            .content .contentAx p{
-                font-size: 1em;
-            }
-            .content .contentAx a{
-            padding: 30px 30px;
-            font-size: 20px;
-            font-weight: 700;
-            letter-spacing: 3px;
-            margin-left: 0;
+        .content .contentAx h2 {
+          font-size: 1.5em;
         }
-            /*.................Circuit..................*/
-            .Container {
-                width:auto;
-                align-items: center;
-                margin-left: 40px;
-            }
-            .Container .Card{
-                align-items: center;
-                width: 400px;
-                height: 600px;
-               }
-
-            /*.................Our Team..................*/   
-            .Containers .Cards
-            {
-                position: relative;
-                width: 300px;
-                height: 400px;
-                margin: 30px;
-                border-radius: 15px;
-            }
-
-            .Containers {
-                height:100%;
-                width: 100%;
-            
-            }
-            section::before
-            {
-                top: 30%;
-                left:-13%;
-            }
-            section::after
-            {
-                top: -10%;
-                left: -8%;
-            }
-
+        .content .contentAx h1 {
+          font-size: 4.5em;
+        }
+        .content .contentAx h4 {
+          font-size: 1.5em;
+        }
+        .content .contentAx p {
+          font-size: 1.3em;
+        }
+        .content .contentAx a {
+          padding: 25px 25px;
+          font-size: 20px;
+          font-weight: 700;
+          letter-spacing: 3px;
+          margin-left: 0;
         }
 
-
-        @media (min-width: 768px) and (max-width: 991px)
-        {
-            header{
-                padding: 15px 40px;
-            }
-            header .logo{
-                font-size: 20px;
-            }
-            .first{
-                padding: 40px;
-                background: url(/home/bg3.jpeg) ;
-                background-size: cover;
-                background-position: center;
-            }
-            .content .contentAx{
-                margin-top: 400px;
-            }
-            .content .contentAx h2{
-                font-size: 1.2em;
-            }
-            .content .contentAx h1{
-                font-size: 3.5em;
-            }
-            .content .contentAx h4{
-                font-size: 1.2em;
-            }
-            .content .contentAx p{
-                font-size: 1.05em;
-            }
-            .first{
-            padding-left: 100px;
-            padding-bottom: 400px;
-
-             }
-            .content .contentAx a{
-            padding: 15px 15px;
-            font-size: 20px;
-            font-weight: 700;
-            letter-spacing: 3px;
-            margin-left: 0;
+        /*.................Circuit..................*/
+        .Container {
+          width: auto;
+          align-items: center;
+          margin-left: 0;
         }
-        
-            header .navigation{
-                position: fixed;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                background:#000 ;
-                z-index: 10;
-                display: none;
-                justify-content: center;
-                align-items: center;
-                flex-direction: column;
-            }
-            header .navigation.active{
-                display: flex;
-            }
-            header .navigation li a{
-                font-size: 24px;
-                margin: 10px 0;
-            }
-            
-            .toggleMenu{
-                position: relative;
-                width: 30px;
-                height: 30px;
-                background: url(menu.png);
-                background-position: center;
-                background-size: 30px;
-                background-repeat: no-repeat;
-                cursor: pointer;
-                z-index: 11;
-            }
-            .toggleMenu.active{
-              background: url(close.png);
-              background-position: center;
-              background-size: 25px;
-              background-repeat: no-repeat;
-            }
-            
-            /*.................Circuit..................*/
-            .Container {
-                width: auto;
-                align-items: center;
-                margin-left: 0;
-            }
-            .Container .Card{
-                align-items: center;
-                width: 400px;
-                height: 600px;
-               }
-
-            /*.................Our Team..................*/   
-           
-            .Containers {
-                height: 1200px;
-            
-            }
-            section::before
-            {
-                top: 35%;
-                left: 0%;
-                clip-path: circle(25% at right 90%);
-            }
-            section::after
-            {
-                top: -20%;
-                left: -10%;
-            }
+        .Container .Card {
+          align-items: center;
+          width: 450px;
+          height: 600px;
         }
 
-        @media (min-width: 575px) and (max-width: 767px)
-        {
-            header{
-                padding: 15px 40px;
-            }
-            header .logo{
-                font-size: 20px;
-            }
-            .first{
-                padding: 40px;
-                background: url(/home/bg3.jpeg) ;
-                background-size: cover;
-                background-position: center;
-            }
-            
-            .content .contentAx h2{
-                font-size: 1.1em;
-            }
-            .content .contentAx h1{
-                font-size: 3em;
-            }
-            .content .contentAx h4{
-                font-size: 1.1em;
-            }
-            .content .contentAx p{
-                font-size: 1em;
-            }
-            .first{
-            padding-left: 80px;
-            padding-bottom: 150px;
-             }
-            .content .contentAx a{
-            padding: 10px 30px;
-            font-size: 20px;
-            font-weight: 700;
-            letter-spacing: 3px;
-            margin-left: 0;
-        }
-        
-            header .navigation{
-                position: fixed;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                background:#000 ;
-                z-index: 10;
-                display: none;
-                justify-content: center;
-                align-items: center;
-                flex-direction: column;
-            }
-            header .navigation.active{
-                display: flex;
-            }
-            header .navigation li a{
-                font-size: 24px;
-                margin: 10px 0;
-            }
-            
-            .toggleMenu{
-                position: relative;
-                width: 30px;
-                height: 30px;
-                background: url(menu.png);
-                background-position: center;
-                background-size: 30px;
-                background-repeat: no-repeat;
-                cursor: pointer;
-                z-index: 11;
-            }
-            .toggleMenu.active{
-              background: url(close.png);
-              background-position: center;
-              background-size: 25px;
-              background-repeat: no-repeat;
-            }
-            
-            /*.................Circuit..................*/
-            .Container {
-                width: auto;
-                margin-left: -20px;
-                margin-top: 500px;
-                margin-bottom: 500px;
-            }
-            .Container .Card{
-                align-items: center;
-                width: 400px;
-                height: 600px;
-               }
+        /*.................Our Team..................*/
 
-            /*.................Our Team..................*/   
-           
-            section::before
-            {
-                top: 280%;
-                left: -15%;
-                clip-path: circle(40% at right 90%); 
-            }
-            section::after
-            {
-                top: 0%;
-                left: 0%;
-                clip-path: circle(30% at 10% 20%);
-            }
+        section::before {
+          clip-path: circle(30% at right 80%);
+          top: 35%;
+          left: 0%;
+        }
+        section::after {
+          top: -30%;
+          left: -5%;
+        }
+      }
+
+      @media (min-width: 1701px) and (max-width: 1900px) {
+        header {
+          padding: 25px 40px;
+        }
+        header .logo {
+          font-size: 20px;
+        }
+        header .navigation li a {
+          margin-right: 40px;
+          padding-right: 40px;
+          font-size: 22px;
+        }
+        .first {
+          padding-left: 600px;
+          padding-bottom: 400px;
+        }
+        .content .contentAx {
+          margin-top: 400px;
+        }
+        .content .contentAx h2 {
+          font-size: 1.5em;
+        }
+        .content .contentAx h1 {
+          font-size: 4.5em;
+        }
+        .content .contentAx h4 {
+          font-size: 1.5em;
+        }
+        .content .contentAx p {
+          font-size: 1.3em;
+        }
+        .content .contentAx a {
+          padding: 25px 25px;
+          font-size: 20px;
+          font-weight: 700;
+          letter-spacing: 3px;
+          margin-left: 0;
         }
 
-        @media (min-width: 480px) and (max-width: 574px)
-        {
-            header{
-                padding: 15px 40px;
-            }
-            header .logo{
-                font-size: 15px;
-            }
-            .first{
-                padding: 40px;
-                background: url(/home/bg3.jpeg) ;
-                background-size: cover;
-                background-position: center;
-            }
-            .content .contentAx h2{
-                font-size: 1.2em;
-            }
-            .content .contentAx h1{
-                font-size: 3em;
-            }
-            .content .contentAx h4{
-                font-size: 1.1em;
-            }
-            .content .contentAx p{
-                font-size: 1em;
-            }
-            .first{
-            padding-left: 50px;
-            }
-            .content .contentAx a{
-            padding: 30px 30px;
-            font-size: 20px;
-            font-weight: 700;
-            letter-spacing: 3px;
-            margin-left: 0;
+        /*.................Circuit..................*/
+        .Container {
+          width: auto;
+          align-items: center;
+          margin-left: 0;
         }
-        
-            header .navigation{
-                position: fixed;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                background:#000 ;
-                z-index: 10;
-                display: none;
-                justify-content: center;
-                align-items: center;
-                flex-direction: column;
-            }
-            header .navigation.active{
-                display: flex;
-            }
-            header .navigation li a{
-                font-size: 24px;
-                margin: 10px 0;
-            }
-            
-            .toggleMenu{
-                position: relative;
-                width: 30px;
-                height: 30px;
-                background: url(menu.png);
-                background-position: center;
-                background-size: 30px;
-                background-repeat: no-repeat;
-                cursor: pointer;
-                z-index: 11;
-            }
-            .toggleMenu.active{
-              background: url(close.png);
-              background-position: center;
-              background-size: 25px;
-              background-repeat: no-repeat;
-            }
-            
-            /*.................Circuit..................*/
-            .Container {
-                width: auto;
-                align-items: center;
-                margin-left: 10px;
-            }
-            .Container .Card{
-                align-items: center;
-                width: 400px;
-                height: 600px;
-               }
-
-            /*.................Our Team..................*/   
-           
-            section::before
-            {
-                top: 280%;
-                left: -10%;
-            }
-            section::after
-            {
-                top: 0%;
-                left: 5%;
-            }
+        .Container .Card {
+          align-items: center;
+          width: 450px;
+          height: 600px;
         }
 
-        @media (min-width: 340px) and (max-width: 480px)
-        {
-            header{
-                padding: 15px 40px;
-            }
-            header .logo{
-                font-size: 12px;
-            }
-            .first{
-                padding: 40px;
-                background: url(/home/bg3.jpeg) ;
-                background-size: cover;
-                background-position: center;
-            }
-            .content .contentAx h2{
-                font-size: 0.9em;
-            }
-            .content .contentAx h1{
-                font-size: 2.5em;
-            }
-            .content .contentAx h4{
-                font-size: 0.9em;
-            }
-            .content .contentAx p{
-                font-size: 0.8em;
-            }
-            .first{
-                padding-left: 25px;
-                padding-bottom: 200px;
-             }
-            .content .contentAx a{
-                padding: 30px 30px;
-                font-size: 20px;
-                font-weight: 700;
-                letter-spacing: 3px;
-                margin-left: 0;
-            }
-            header .navigation{
-                position: fixed;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                background:#000 ;
-                z-index: 10;
-                display: none;
-                justify-content: center;
-                align-items: center;
-                flex-direction: column;
-            }
-            header .navigation.active{
-                display: flex;
-            }
-            header .navigation li a{
-                font-size: 24px;
-                margin: 10px 0;
-            }
-            
-            .toggleMenu{
-                position: relative;
-                width: 30px;
-                height: 30px;
-                background: url(menu.png);
-                background-position: center;
-                background-size: 30px;
-                background-repeat: no-repeat;
-                cursor: pointer;
-                z-index: 11;
-            }
-            .toggleMenu.active{
-              background: url(close.png);
-              background-position: center;
-              background-size: 25px;
-              background-repeat: no-repeat;
-            }
-            
-            /*.................Circuit..................*/
-            .Container {
-                width: auto;
-                align-items: center;
-                margin-left: 10px;
-                overflow: auto;
-            }
-            .Container .Card{
-                align-items: center;
-                width: 300px;
-                height: 750px;
-            }
-               .content .contentAx a{
-                padding: 15px 15px;
-                font-size: 17px;
-                font-weight: 700;
-                letter-spacing: 3px;
-                margin-left: 0;
-            }
-            .Container .Card .Content p{
-   
-                font-size: 1.2em;
-                font-weight:50;
-                letter-spacing: 1px;
-            }
+        /*.................Our Team..................*/
 
-            /*.................Our Team..................*/   
-           
-            section::before
-            {
-                top: 280%;
-                left: -5%;
-            }
-            section::after
-            {
-                top: -10%;
-                left: 0%;
-            }
+        section::before {
+          clip-path: circle(30% at right 80%);
+          top: 35%;
+          left: 0%;
         }
-        @media (min-width: 239px) and (max-width: 339px) {
-            header{
-                padding: 15px 40px;
-            }
-            header .logo{
-                font-size: 10px;
-            }
-            .first{
-                padding: 40px;
-                background: url(/home/bg3.jpeg) ;
-                background-size: cover;
-                background-position: center;
-            }
-            .content .contentAx h2{
-                font-size: 0.7em;
-            }
-            .content .contentAx h1{
-                font-size: 2em;
-            }
-            .content .contentAx h4{
-                font-size: 0.7em;
-            }
-            .content .contentAx p{
-                font-size: 0.6em;
-            }
-            .first{
-            padding-left: 30px;
-            padding-bottom: 200px;
-            }
-            .content .contentAx a{
-            padding: 20px 20px;
-            font-size: 15px;
-            font-weight: 700;
-            letter-spacing: 3px;
-            margin-left: 0;
+        section::after {
+          top: -30%;
+          left: -5%;
         }
-        
-            header .navigation{
-                position: fixed;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                background:#000 ;
-                z-index: 10;
-                display: none;
-                justify-content: center;
-                align-items: center;
-                flex-direction: column;
-            }
-            header .navigation.active{
-                display: flex;
-            }
-            header .navigation li a{
-                font-size: 24px;
-                margin: 10px 0;
-            }
-            .toggleMenu{
-                position: relative;
-                width: 30px;
-                height: 30px;
-                background: url(menu.png);
-                background-position: center;
-                background-size: 30px;
-                background-repeat: no-repeat;
-                cursor: pointer;
-                z-index: 11;
-            }
-            .toggleMenu.active{
-              background: url(close.png);
-              background-position: center;
-              background-size: 25px;
-              background-repeat: no-repeat;
-            }
-            
-            /*.................Circuit..................*/
-            .Container {
-                width: auto;
-                align-items: center;
-                margin-left: 20px;
-            }
-            .Container .Card{
-                align-items: center;
-                width: 250px;
-                height: 450px;
-               }
-            .Container .Card .Content p{
-                font-size: 0.7em;
-                font-weight:50;
-                letter-spacing: 1px;
-            }
-            .Container .Card .Content h3{
-                font-size: 1em;
-             }
+      }
+      @media (min-width: 1501px) and (max-width: 1700px) {
+        header {
+          padding: 25px 40px;
+        }
+        header .logo {
+          font-size: 20px;
+        }
+        .first {
+          padding-left: 500px;
+          padding-bottom: 400px;
+        }
+        .content .contentAx {
+          margin-top: 400px;
+        }
+        .content .contentAx h2 {
+          font-size: 1.3em;
+        }
+        .content .contentAx h1 {
+          font-size: 4em;
+        }
+        .content .contentAx h4 {
+          font-size: 1.3em;
+        }
+        .content .contentAx p {
+          font-size: 1.1em;
+        }
+        .content .contentAx a {
+          padding: 20px 20px;
+          font-size: 20px;
+          font-weight: 700;
+          letter-spacing: 3px;
+          margin-left: 0;
+        }
 
-            /*.................Our Team..................*/   
-           
-            section::before
-            {
-                top: 280%;
-                left: 5%;
-            }
-            section::after
-            {
-                top: -10%;
-                left: 0%;
-            }
+        /*.................Circuit..................*/
+        .Container {
+          width: auto;
+          align-items: center;
+          margin-left: 00px;
         }
+        .Container .Card {
+          align-items: center;
+          width: 400px;
+          height: 600px;
+        }
+
+        /*.................Our Team..................*/
+
+        section::before {
+          clip-path: circle(30% at right 80%);
+          top: 85%;
+          left: 0%;
+        }
+        section::after {
+          top: -10%;
+          left: -5%;
+        }
+      }
+
+      @media (min-width: 1301px) and (max-width: 1500px) {
+        header {
+          padding: 25px 40px;
+        }
+        header .logo {
+          font-size: 20px;
+        }
+        .first {
+          padding-left: 400px;
+          padding-bottom: 400px;
+        }
+        .content .contentAx {
+          margin-top: 400px;
+        }
+        .content .contentAx h2 {
+          font-size: 1em;
+        }
+        .content .contentAx h1 {
+          font-size: 3em;
+        }
+        .content .contentAx h4 {
+          font-size: 1.2em;
+        }
+        .content .contentAx p {
+          font-size: 1em;
+        }
+        .content .contentAx a {
+          padding: 20px 20px;
+          font-size: 20px;
+          font-weight: 700;
+          letter-spacing: 3px;
+          margin-left: 0;
+        }
+
+        /*.................Circuit..................*/
+        .Container {
+          width: auto;
+          align-items: center;
+          margin-left: 00px;
+        }
+        .Container .Card {
+          align-items: center;
+          width: 400px;
+          height: 600px;
+        }
+
+        /*.................Our Team..................*/
+
+        section::before {
+          clip-path: circle(30% at right 80%);
+          top: 85%;
+          left: 0%;
+        }
+        section::after {
+          top: -10%;
+          left: -5%;
+        }
+      }
+      @media (min-width: 1101px) and (max-width: 1300px) {
+        header {
+          padding: 30px 40px;
+        }
+        header .logo {
+          font-size: 20px;
+        }
+
+        .first {
+          padding-left: 300px;
+          padding-bottom: 450px;
+        }
+        .content .contentAx {
+          margin-top: 400px;
+        }
+        .content .contentAx h2 {
+          font-size: 1em;
+        }
+        .content .contentAx h1 {
+          font-size: 3em;
+        }
+        .content .contentAx h4 {
+          font-size: 1.2em;
+        }
+        .content .contentAx p {
+          font-size: 1em;
+        }
+        .content .contentAx a {
+          padding: 20px 20px;
+          font-size: 20px;
+          font-weight: 700;
+          letter-spacing: 3px;
+          margin-left: 0;
+        }
+        /*.................Circuit..................*/
+        .Container {
+          width: auto;
+          align-items: center;
+          margin-left: 40px;
+        }
+        .Container .Card {
+          align-items: center;
+          width: 400px;
+          height: 600px;
+        }
+
+        /*.................Our Team..................*/
+        .Containers .Cards {
+          position: relative;
+          width: 300px;
+          height: 400px;
+          margin: 30px;
+          border-radius: 15px;
+        }
+
+        .Containers {
+          height: 100%;
+          width: 100%;
+        }
+        section::before {
+          top: 30%;
+          left: -13%;
+        }
+        section::after {
+          top: -10%;
+          left: -8%;
+        }
+      }
+      @media (min-width: 992px) and (max-width: 1100px) {
+        header {
+          padding: 30px 40px;
+        }
+        header .logo {
+          font-size: 20px;
+        }
+
+        .first {
+          padding-left: 200px;
+          padding-bottom: 400px;
+        }
+        .content .contentAx {
+          margin-top: 400px;
+        }
+        .content .contentAx h2 {
+          font-size: 1em;
+        }
+        .content .contentAx h1 {
+          font-size: 3em;
+        }
+        .content .contentAx h4 {
+          font-size: 1.2em;
+        }
+        .content .contentAx p {
+          font-size: 1em;
+        }
+        .content .contentAx a {
+          padding: 30px 30px;
+          font-size: 20px;
+          font-weight: 700;
+          letter-spacing: 3px;
+          margin-left: 0;
+        }
+        /*.................Circuit..................*/
+        .Container {
+          width: auto;
+          align-items: center;
+          margin-left: 40px;
+        }
+        .Container .Card {
+          align-items: center;
+          width: 400px;
+          height: 600px;
+        }
+
+        /*.................Our Team..................*/
+        .Containers .Cards {
+          position: relative;
+          width: 300px;
+          height: 400px;
+          margin: 30px;
+          border-radius: 15px;
+        }
+
+        .Containers {
+          height: 100%;
+          width: 100%;
+        }
+        section::before {
+          top: 30%;
+          left: -13%;
+        }
+        section::after {
+          top: -10%;
+          left: -8%;
+        }
+      }
+
+      @media (min-width: 768px) and (max-width: 991px) {
+        header {
+          padding: 15px 40px;
+        }
+        header .logo {
+          font-size: 20px;
+        }
+        .first {
+          padding: 40px;
+          background: url(/home/bg3.jpeg);
+          background-size: cover;
+          background-position: center;
+        }
+        .content .contentAx {
+          margin-top: 400px;
+        }
+        .content .contentAx h2 {
+          font-size: 1.2em;
+        }
+        .content .contentAx h1 {
+          font-size: 3.5em;
+        }
+        .content .contentAx h4 {
+          font-size: 1.2em;
+        }
+        .content .contentAx p {
+          font-size: 1.05em;
+        }
+        .first {
+          padding-left: 100px;
+          padding-bottom: 400px;
+        }
+        .content .contentAx a {
+          padding: 15px 15px;
+          font-size: 20px;
+          font-weight: 700;
+          letter-spacing: 3px;
+          margin-left: 0;
+        }
+
+        header .navigation {
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: #000;
+          z-index: 10;
+          display: none;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+        }
+        header .navigation.active {
+          display: flex;
+        }
+        header .navigation li a {
+          font-size: 24px;
+          margin: 10px 0;
+        }
+
+        .toggleMenu {
+          position: relative;
+          width: 30px;
+          height: 30px;
+          background: url(menu.png);
+          background-position: center;
+          background-size: 30px;
+          background-repeat: no-repeat;
+          cursor: pointer;
+          z-index: 11;
+        }
+        .toggleMenu.active {
+          background: url(close.png);
+          background-position: center;
+          background-size: 25px;
+          background-repeat: no-repeat;
+        }
+
+        /*.................Circuit..................*/
+        .Container {
+          width: auto;
+          align-items: center;
+          margin-left: 0;
+        }
+        .Container .Card {
+          align-items: center;
+          width: 400px;
+          height: 600px;
+        }
+
+        /*.................Our Team..................*/
+
+        .Containers {
+          height: 1200px;
+        }
+        section::before {
+          top: 35%;
+          left: 0%;
+          clip-path: circle(25% at right 90%);
+        }
+        section::after {
+          top: -20%;
+          left: -10%;
+        }
+      }
+
+      @media (min-width: 575px) and (max-width: 767px) {
+        header {
+          padding: 15px 40px;
+        }
+        header .logo {
+          font-size: 20px;
+        }
+        .first {
+          padding: 40px;
+          background: url(/home/bg3.jpeg);
+          background-size: cover;
+          background-position: center;
+        }
+
+        .content .contentAx h2 {
+          font-size: 1.1em;
+        }
+        .content .contentAx h1 {
+          font-size: 3em;
+        }
+        .content .contentAx h4 {
+          font-size: 1.1em;
+        }
+        .content .contentAx p {
+          font-size: 1em;
+        }
+        .first {
+          padding-left: 80px;
+          padding-bottom: 150px;
+        }
+        .content .contentAx a {
+          padding: 10px 30px;
+          font-size: 20px;
+          font-weight: 700;
+          letter-spacing: 3px;
+          margin-left: 0;
+        }
+
+        header .navigation {
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: #000;
+          z-index: 10;
+          display: none;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+        }
+        header .navigation.active {
+          display: flex;
+        }
+        header .navigation li a {
+          font-size: 24px;
+          margin: 10px 0;
+        }
+
+        .toggleMenu {
+          position: relative;
+          width: 30px;
+          height: 30px;
+          background: url(menu.png);
+          background-position: center;
+          background-size: 30px;
+          background-repeat: no-repeat;
+          cursor: pointer;
+          z-index: 11;
+        }
+        .toggleMenu.active {
+          background: url(close.png);
+          background-position: center;
+          background-size: 25px;
+          background-repeat: no-repeat;
+        }
+
+        /*.................Circuit..................*/
+        .Container {
+          width: auto;
+          margin-left: -20px;
+          margin-top: 500px;
+          margin-bottom: 500px;
+        }
+        .Container .Card {
+          align-items: center;
+          width: 400px;
+          height: 600px;
+        }
+
+        /*.................Our Team..................*/
+
+        section::before {
+          top: 280%;
+          left: -15%;
+          clip-path: circle(40% at right 90%);
+        }
+        section::after {
+          top: 0%;
+          left: 0%;
+          clip-path: circle(30% at 10% 20%);
+        }
+      }
+
+      @media (min-width: 480px) and (max-width: 574px) {
+        header {
+          padding: 15px 40px;
+        }
+        header .logo {
+          font-size: 15px;
+        }
+        .first {
+          padding: 40px;
+          background: url(/home/bg3.jpeg);
+          background-size: cover;
+          background-position: center;
+        }
+        .content .contentAx h2 {
+          font-size: 1.2em;
+        }
+        .content .contentAx h1 {
+          font-size: 3em;
+        }
+        .content .contentAx h4 {
+          font-size: 1.1em;
+        }
+        .content .contentAx p {
+          font-size: 1em;
+        }
+        .first {
+          padding-left: 50px;
+        }
+        .content .contentAx a {
+          padding: 30px 30px;
+          font-size: 20px;
+          font-weight: 700;
+          letter-spacing: 3px;
+          margin-left: 0;
+        }
+
+        header .navigation {
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: #000;
+          z-index: 10;
+          display: none;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+        }
+        header .navigation.active {
+          display: flex;
+        }
+        header .navigation li a {
+          font-size: 24px;
+          margin: 10px 0;
+        }
+
+        .toggleMenu {
+          position: relative;
+          width: 30px;
+          height: 30px;
+          background: url(menu.png);
+          background-position: center;
+          background-size: 30px;
+          background-repeat: no-repeat;
+          cursor: pointer;
+          z-index: 11;
+        }
+        .toggleMenu.active {
+          background: url(close.png);
+          background-position: center;
+          background-size: 25px;
+          background-repeat: no-repeat;
+        }
+
+        /*.................Circuit..................*/
+        .Container {
+          width: auto;
+          align-items: center;
+          margin-left: 10px;
+        }
+        .Container .Card {
+          align-items: center;
+          width: 400px;
+          height: 600px;
+        }
+
+        /*.................Our Team..................*/
+
+        section::before {
+          top: 280%;
+          left: -10%;
+        }
+        section::after {
+          top: 0%;
+          left: 5%;
+        }
+      }
+
+      @media (min-width: 340px) and (max-width: 480px) {
+        header {
+          padding: 15px 40px;
+        }
+        header .logo {
+          font-size: 12px;
+        }
+        .first {
+          padding: 40px;
+          background: url(/home/bg3.jpeg);
+          background-size: cover;
+          background-position: center;
+        }
+        .content .contentAx h2 {
+          font-size: 0.9em;
+        }
+        .content .contentAx h1 {
+          font-size: 2.5em;
+        }
+        .content .contentAx h4 {
+          font-size: 0.9em;
+        }
+        .content .contentAx p {
+          font-size: 0.8em;
+        }
+        .first {
+          padding-left: 25px;
+          padding-bottom: 200px;
+        }
+        .content .contentAx a {
+          padding: 30px 30px;
+          font-size: 20px;
+          font-weight: 700;
+          letter-spacing: 3px;
+          margin-left: 0;
+        }
+        header .navigation {
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: #000;
+          z-index: 10;
+          display: none;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+        }
+        header .navigation.active {
+          display: flex;
+        }
+        header .navigation li a {
+          font-size: 24px;
+          margin: 10px 0;
+        }
+
+        .toggleMenu {
+          position: relative;
+          width: 30px;
+          height: 30px;
+          background: url(menu.png);
+          background-position: center;
+          background-size: 30px;
+          background-repeat: no-repeat;
+          cursor: pointer;
+          z-index: 11;
+        }
+        .toggleMenu.active {
+          background: url(close.png);
+          background-position: center;
+          background-size: 25px;
+          background-repeat: no-repeat;
+        }
+
+        /*.................Circuit..................*/
+        .Container {
+          width: auto;
+          align-items: center;
+          margin-left: 10px;
+          overflow: auto;
+        }
+        .Container .Card {
+          align-items: center;
+          width: 300px;
+          height: 750px;
+        }
+        .content .contentAx a {
+          padding: 15px 15px;
+          font-size: 17px;
+          font-weight: 700;
+          letter-spacing: 3px;
+          margin-left: 0;
+        }
+        .Container .Card .Content p {
+          font-size: 1.2em;
+          font-weight: 50;
+          letter-spacing: 1px;
+        }
+
+        /*.................Our Team..................*/
+
+        section::before {
+          top: 280%;
+          left: -5%;
+        }
+        section::after {
+          top: -10%;
+          left: 0%;
+        }
+      }
+      @media (min-width: 239px) and (max-width: 339px) {
+        header {
+          padding: 15px 40px;
+        }
+        header .logo {
+          font-size: 10px;
+        }
+        .first {
+          padding: 40px;
+          background: url(/home/bg3.jpeg);
+          background-size: cover;
+          background-position: center;
+        }
+        .content .contentAx h2 {
+          font-size: 0.7em;
+        }
+        .content .contentAx h1 {
+          font-size: 2em;
+        }
+        .content .contentAx h4 {
+          font-size: 0.7em;
+        }
+        .content .contentAx p {
+          font-size: 0.6em;
+        }
+        .first {
+          padding-left: 30px;
+          padding-bottom: 200px;
+        }
+        .content .contentAx a {
+          padding: 20px 20px;
+          font-size: 15px;
+          font-weight: 700;
+          letter-spacing: 3px;
+          margin-left: 0;
+        }
+
+        header .navigation {
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: #000;
+          z-index: 10;
+          display: none;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+        }
+        header .navigation.active {
+          display: flex;
+        }
+        header .navigation li a {
+          font-size: 24px;
+          margin: 10px 0;
+        }
+        .toggleMenu {
+          position: relative;
+          width: 30px;
+          height: 30px;
+          background: url(menu.png);
+          background-position: center;
+          background-size: 30px;
+          background-repeat: no-repeat;
+          cursor: pointer;
+          z-index: 11;
+        }
+        .toggleMenu.active {
+          background: url(close.png);
+          background-position: center;
+          background-size: 25px;
+          background-repeat: no-repeat;
+        }
+
+        /*.................Circuit..................*/
+        .Container {
+          width: auto;
+          align-items: center;
+          margin-left: 20px;
+        }
+        .Container .Card {
+          align-items: center;
+          width: 250px;
+          height: 450px;
+        }
+        .Container .Card .Content p {
+          font-size: 0.7em;
+          font-weight: 50;
+          letter-spacing: 1px;
+        }
+        .Container .Card .Content h3 {
+          font-size: 1em;
+        }
+
+        /*.................Our Team..................*/
+
+        section::before {
+          top: 280%;
+          left: 5%;
+        }
+        section::after {
+          top: -10%;
+          left: 0%;
+        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="first">
-        <header>
-            <a href="#" class="logo">Circuitation</a>
-            <div class="toggleMenu" onclick="toggleMenu();"></div>
-            <ul class="navigation">
-                <li><a href="#Home" name="scroll-to-Home" id="scroll-to-Home">Home</a></li>
-                <li><a href="#Circuits" name="scroll-to-ourteam" id="scroll-to-ourteam">Circuits</a></li>
-                <li><a href="#ourteam" name="scroll-to-ourteam" id="scroll-to-ourteam">About Us</a></li>
-                <li><a href="#views/login.html">Signup</a></li>
-                <li><a href="#" >Login</a></li>
-            </ul>
-        </header>
+      <header>
+        <a href="#" class="logo">Circuitation</a>
+        <div class="toggleMenu" onclick="toggleMenu();"></div>
+        <ul class="navigation">
+          <li><a href="#Home" name="scroll-to-Home" id="scroll-to-Home">Home</a></li>
+          <li><a href="#Circuits" name="scroll-to-ourteam" id="scroll-to-ourteam">Circuits</a></li>
+          <li><a href="#ourteam" name="scroll-to-ourteam" id="scroll-to-ourteam">About Us</a></li>
+          <li><a href="/login">Signup</a></li>
+          <li><a href="/login">Login</a></li>
+        </ul>
+      </header>
 
-        <div class="content">
-            <div class="contentAx">
-                <h2>WELCOME TO</h2>
-                <h1>CIRCUITATION</h1>
-                <center><h4>Vishwakarma  Institute Of Information Technology</h4></center>
-                <p>Circuitation: A Circuit Schema Provider provides different electronic circuits based on users requirments. It provides an user-friendly environment to display circuits that could save your time during all the phases of designing process.</p>
-                <a href="#">Get Started</a>
-            </div>
+      <div class="content">
+        <div class="contentAx">
+          <h2>WELCOME TO</h2>
+          <h1>CIRCUITATION</h1>
+          <center><h4>Vishwakarma Institute Of Information Technology</h4></center>
+          <p>
+            Circuitation: A Circuit Schema Provider provides different electronic circuits based on
+            users requirments. It provides an user-friendly environment to display circuits that
+            could save your time during all the phases of designing process.
+          </p>
+          <a href="#">Get Started</a>
         </div>
+      </div>
     </div>
 
     <!------------------------------------------------Circuits--------------------------------------------->
     <div class="Container" id="Circuits">
-        <div class="Card">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <div class="Content">
-                <h2>01</h2>
-                <h3>Linear Power Supply</h3><br>
-                <p> The Linear Power Supply is power supplying circuit which is used in electrical and
-                    electronic circuit to supply the DC power to the circuit. It consists of a step-down
-                    transformer, rectifier, a filter circuit and voltage regulator. The AC is always
-                    supplied with high voltage because it is economical to supply AC at high voltage.</p>
-                    <a href="#">Read More </a>
-            </div>
+      <div class="Card">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <div class="Content">
+          <h2>01</h2>
+          <h3>Linear Power Supply</h3>
+          <br />
+          <p>
+            The Linear Power Supply is power supplying circuit which is used in electrical and
+            electronic circuit to supply the DC power to the circuit. It consists of a step-down
+            transformer, rectifier, a filter circuit and voltage regulator. The AC is always
+            supplied with high voltage because it is economical to supply AC at high voltage.
+          </p>
+          <a href="#">Read More </a>
         </div>
+      </div>
     </div>
 
     <!------------------------------------------------Our Team--------------------------------------------->
     <section>
-        <div class="Containers" id="ourteam">
-            <div class="Cards">
-                <div class="contents">
-                    <div class="imgBx"><img src="/ourteam/abhishek.jpeg"></div>
-                    <div class="contentBx">
-                        <h3>Abhishek Prasad <br><span>Web designer & Developer</span></h3>
-                    </div>
-                </div>
-                <ul class="scii">
-                    <li style="--i:1">
-                        <a href="https://www.facebook.com/profile.php?id=100019162860988"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                    </li>
-
-                    <li style="--i:2">
-                        <a href="https://www.instagram.com/abhishekkumar3949?r=nametag"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                    </li>
-                </ul>
+      <div class="Containers" id="ourteam">
+        <div class="Cards">
+          <div class="contents">
+            <div class="imgBx"><img src="/ourteam/abhishek.jpeg" /></div>
+            <div class="contentBx">
+              <h3>Abhishek Prasad <br /><span>Web designer & Developer</span></h3>
             </div>
+          </div>
+          <ul class="scii">
+            <li style="--i: 1">
+              <a href="https://www.facebook.com/profile.php?id=100019162860988"
+                ><i class="fa fa-facebook" aria-hidden="true"></i
+              ></a>
+            </li>
 
-            <div class="Cards">
-                <div class="contents">
-                    <div class="imgBx"><img src="/ourteam/Kashif.jpeg"></div>
-                    <div class="contentBx">
-                        <h3>Kashif Hussain <br><span>Backend & Database Developer</span></h3>
-                    </div>
-                </div>
-                <ul class="scii">
-                    <li style="--i:1">
-                        <a href="https://www.facebook.com/hussain.kashif.3766"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                    </li>
-
-                    <li style="--i:2">
-                        <a href="https://instagram.com/kashif_hussain90?utm_medium=copy_link"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="Cards">
-                <div class="contents">
-                    <div class="imgBx"><img src="/ourteam/Anushka.jpeg"></div>
-                    <div class="contentBx">
-                        <h3>Anushka Sinha <br><span>Power Electronics</span></h3>
-                    </div>
-                </div>
-                <ul class="scii">
-                    <li style="--i:1">
-                        <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                    </li>
-
-                    <li style="--i:2">
-                        <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="Cards">
-                <div class="contents">
-                    <div class="imgBx"><img src="/ourteam/Shashank.jpg"></div>
-                    <div class="contentBx">
-                        <h3>Shashank Nair <br><span>Power Electronics</span></h3>
-                    </div>
-                </div>
-                <ul class="scii">
-                    <li style="--i:1">
-                        <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                    </li>
-
-                    <li style="--i:2">
-                        <a href="https://instagram.com/me_shashanknair?utm_medium=copy_link"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="Cards">
-                <div class="contents">
-                    <div class="imgBx"><img src="/ourteam/akshay.JPG"></div>
-                    <div class="contentBx">
-                        <h3>Akshay Pande <br><span>Former Backend Developer</span></h3>
-                    </div>
-                </div>
-                <ul class="scii">
-                    <li style="--i:1">
-                        <a href="https://www.facebook.com/akshujain555"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                    </li>
-
-                    <li style="--i:2">
-                        <a href="https://instagram.com/akshayvpande?utm_medium=copy_link"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                    </li>
-                </ul>
-            </div>
+            <li style="--i: 2">
+              <a href="https://www.instagram.com/abhishekkumar3949?r=nametag"
+                ><i class="fa fa-instagram" aria-hidden="true"></i
+              ></a>
+            </li>
+          </ul>
         </div>
-    </section>
-      <script type="text/javascript">
-      function toggleMenu(){
-          const toggleMenu= document.querySelector('.toggleMenu');
-          const navigation= document.querySelector('.navigation');
-          toggleMenu.classList.toggle('active')
-          navigation.classList.toggle('active')
-      }
-    
-    </script>
 
-</body>
+        <div class="Cards">
+          <div class="contents">
+            <div class="imgBx"><img src="/ourteam/Kashif.jpeg" /></div>
+            <div class="contentBx">
+              <h3>Kashif Hussain <br /><span>Backend & Database Developer</span></h3>
+            </div>
+          </div>
+          <ul class="scii">
+            <li style="--i: 1">
+              <a href="https://www.facebook.com/hussain.kashif.3766"
+                ><i class="fa fa-facebook" aria-hidden="true"></i
+              ></a>
+            </li>
+
+            <li style="--i: 2">
+              <a href="https://instagram.com/kashif_hussain90?utm_medium=copy_link"
+                ><i class="fa fa-instagram" aria-hidden="true"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="Cards">
+          <div class="contents">
+            <div class="imgBx"><img src="/ourteam/Anushka.jpeg" /></div>
+            <div class="contentBx">
+              <h3>Anushka Sinha <br /><span>Power Electronics</span></h3>
+            </div>
+          </div>
+          <ul class="scii">
+            <li style="--i: 1">
+              <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            </li>
+
+            <li style="--i: 2">
+              <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="Cards">
+          <div class="contents">
+            <div class="imgBx"><img src="/ourteam/Shashank.jpg" /></div>
+            <div class="contentBx">
+              <h3>Shashank Nair <br /><span>Power Electronics</span></h3>
+            </div>
+          </div>
+          <ul class="scii">
+            <li style="--i: 1">
+              <a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            </li>
+
+            <li style="--i: 2">
+              <a href="https://instagram.com/me_shashanknair?utm_medium=copy_link"
+                ><i class="fa fa-instagram" aria-hidden="true"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="Cards">
+          <div class="contents">
+            <div class="imgBx"><img src="/ourteam/akshay.JPG" /></div>
+            <div class="contentBx">
+              <h3>Akshay Pande <br /><span>Former Backend Developer</span></h3>
+            </div>
+          </div>
+          <ul class="scii">
+            <li style="--i: 1">
+              <a href="https://www.facebook.com/akshujain555"
+                ><i class="fa fa-facebook" aria-hidden="true"></i
+              ></a>
+            </li>
+
+            <li style="--i: 2">
+              <a href="https://instagram.com/akshayvpande?utm_medium=copy_link"
+                ><i class="fa fa-instagram" aria-hidden="true"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <script type="text/javascript">
+      function toggleMenu() {
+        const toggleMenu = document.querySelector(".toggleMenu");
+        const navigation = document.querySelector(".navigation");
+        toggleMenu.classList.toggle("active");
+        navigation.classList.toggle("active");
+      }
+    </script>
+  </body>
 </html>

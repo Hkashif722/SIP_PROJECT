@@ -152,12 +152,14 @@ app.post("/login", (req, res) => {
     }
   });
 });
-
+app.get("/login", (req, res) => {
+  res.render("login");
+});
 app.get("/logout", (req, res) => {
   req.logOut();
   res.redirect("/");
 });
 
-app.listen("3001", () => {
+app.listen("3000", () => {
   console.log("server is up and running");
 });
