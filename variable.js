@@ -16,7 +16,8 @@ exports.variable = (v1, v2, v3, v4, v5) => {
     const v_rpp_in_max = 0.005 * Math.pow(10, power);
     const v_in_reg_max = Vin_reg + v_rpp_in_max / 2;
     const pow_cap = Math.pow(10, 6);
-    const c = Math.floor((I_l / (2 * freq * v_rpp_in_max)) * pow_cap);
+    var c = Math.floor((I_l / (2 * freq * v_rpp_in_max)) * pow_cap);
+
     let value = v_in_reg_max / (2 * v_rpp_in_max);
     value = Math.pow(value, 0.5) * 3.14;
     const v_in_max = v_in + 10;

@@ -2,6 +2,7 @@ const express = require("express");
 const ejs = require("ejs");
 const varCalc = require(__dirname + "/variable.js");
 const constCalc = require(__dirname + "/constant");
+const rel_Value = require("./relativeCValue");
 
 const mongoose = require("mongoose");
 const session = require("express-session");
@@ -34,11 +35,11 @@ const userSchema = new mongoose.Schema({
   password: String,
 });
 
-const valueSchema = {
-  value: Number,
-};
+// const valueSchema = {
+//   value: Number,
+// };
 
-const Value = mongoose.model("Value", valueSchema);
+// const Value = mongoose.model("Value", valueSchema);
 // let x = Number(1350);
 // Value.find((err, docs) => {
 //   //console.log(docs);
@@ -59,13 +60,24 @@ app.get("/", (req, res) => {
   // });
 });
 
-app.post("/input", (req, res) => {
+app.post("/input", async (req, res) => {
   let value = req.body;
   let calValue = varCalc.variable(value.v1, value.v2, value.v3, value.v4, value.v5);
-  console.log(calValue);
-  if (calValue.vout > 0 && calValue.voutTo > 0) res.render("VP317", { c_Values: calValue });
-  else if (calValue.vout < 0 && calValue.voutTo < 0) res.render("VN337");
-  else res.render("VCOMB", { c_Values: calValue });
+  if (calValue.vout > 0 && calValue.voutTo > 0) {
+    let c = await rel_Value.relativeValue(calValue.c);
+    calValue.c = c;
+    res.render("VP317", { c_Values: calValue });
+  } else if (calValue.vout < 0 && calValue.voutTo < 0) {
+    let c = await rel_Value.relativeValue(calValue.c);
+    calValue.c = c;
+    res.render("VN337", { c_Values: calValue });
+  } else {
+    let c_1 = await rel_Value.relativeValue(calValue.v_psv.c);
+    calValue.v_psv.c = c_1;
+    let c_2 = await rel_Value.relativeValue(calValue.v_psv.c);
+    calValue.v_neg.c = c_2;
+    res.render("VCOMB", { c_Values: calValue });
+  }
 });
 
 app.post("/inputa", (req, res) => {
