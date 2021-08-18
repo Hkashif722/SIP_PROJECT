@@ -10,10 +10,95 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>    <!--main start -->
   <style type="text/css">
-   .w3-sidebar h3
-    {
-     margin-left:150px;
-     margin-top: 20px;
+   *{
+        margin:0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Josefin Sans', sans-serif;
+    }
+    .tophead{
+        width: 100%;
+        height: 65px;
+        background: black;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .brandlogo{
+        color: #fff;
+        font-size: 20px;
+        margin-left:auto;
+        display:flex;
+      }
+    .back{
+      color: #fff;
+      margin-right: 20px;
+      font-size: medium;
+    }
+    .menulines{
+        font-size: 30px;
+        cursor: pointer;
+        margin-left: 50px;
+        color: #fff;
+    }
+    .mainpart{
+        margin-top: 50px;
+        margin-left: 50px;
+    }
+    .sidenav{
+        height: 100%;
+        width: 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        background: lightgray;
+        overflow-x: hidden;
+        padding-top: 60px;
+        transition: all 0.5s;
+    }
+    .sidenav a{
+        text-decoration: none;
+        font-size: 20px;
+        color: #fff;
+        display: block;
+        padding: 30px 0 30px 20px;
+    }
+    .sidenav a:hover{
+        color: red;
+    }
+    .closebtn{
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 40px!important;
+        
+    }
+    input[type=text]{
+        width: 100%;
+        border: 1px solid #000;
+        border-radius: 4px;
+        margin: 8px 0;
+        margin-left: 10px;
+        width: 190px;
+        outline: none;
+        padding: 1px;
+        box-sizing: border-box;
+        color: #000;
+        align-items: center;
+        text-align: center;
+    }
+    label{
+        color: #000;
+        font-style:oblique ;
+        font-weight: 650;
+        padding-left: 10px;
+    }
+    .sidenav a{
+        color: #000;
+        align-items:center ;
+        padding-left: 50px;
+        font-weight: 700;
     }
     .imagebox{
      align-items: center;
@@ -217,70 +302,51 @@
       
   </style>
   <body>
-    <div class="jumbotron text-center" style="margin-bottom:0">
-      <h1>CIRCUITATION </h1>
+    <div class="titlebar" style="margin-bottom:0">
+      <h1> CIRCUITATION </h1>
       <h4>A Circuit Design Provider And Simulation Website</h4> 
     </div>
-    <div>
-      <nav class="navbar navbar-expand-sm aa bg-dark navbar-dark ">
-        <button class="w3-button text-white w3-xlarge" onclick="w3_open()">☰</button>
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link text-white" href="/page">BACK</a>
-          </li>
-          <li class="nav-item ">
-            <a class="nav-link text-white" href="/logout">LOGOUT</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-
     <!-- Sidebar -->
-    <div class="w3-sidebar w3-light-grey w3-bar-block w3-border-right" style="display:none" id="mySidebar">
-      <button onclick="w3_close()" class="w3-bar-item w3-large">CLOSE &times;</button>
-      <div class="list-group-item list-group-item-">
-        <center><h2>USER INPUT</h2></center>
+    <header>
+      <div class="tophead">
+        <div>
+          <span class="menulines" onclick="openNav()">&#9776</span>
+        </div>
+          <div class="brandlogo">
+            <a class="back" href="/page">BACK</a>
+            <a class="back" href="/logout">LOGOUT</a>
+          </div>
       </div>
-      <form class="w3-container">
-        <fieldset disabled>
-          <div class="form-group">
-            <label for="disabledTextInput">Vin</label>
-            <input type="text" id="Vin" class="form-control"  value=" <%=c_Values.v_in%> volt" placeholder="Vin">
-          </div>
-          <fieldset disabled>
-          <div class="form-group">
-            <label for="disabledTextInput">Frequency</label>
-            <input type="text" id="Frequency" class="form-control"  value=" <%=c_Values.freq%> Hz" placeholder="Frequency">
-          </div>
-          <fieldset disabled>
-            <div class="form-group">
-              <label for="disabledTextInput">VOut</label>
-              <input type="text" id="VOut" class="form-control" value="<%=c_Values.vout%>" placeholder="VOut">
-            </div>
-      </form><br>
+    </header>
+    <!-- Sidebar -->
+    <div class="sidenav" id="mySidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a>USER INPUT</a>
+      <form>
+      <label>Vin<br></label>
+      <input type="text" value="<%=c_Values.v_in%> volt" placeholder="Vin" disabled>
+      <label>Frequency</label>
+      <input type="text" value="<%=c_Values.freq%> Hz"  placeholder="Frequency" disabled>
+      <label>VOut</label>
+      <input type="text" value="<%=c_Values.vout%>" placeholder="VOut" disabled>
+         
+     <br>
+      <a>OUTPUT</a>
+      <label>Capacitor (C1)</label>
+      <input type="text" value="<%=c_Values.c%>"  placeholder="Capacitor" disabled>
+      <label>Resistor</label>
+      <input type="text" value="<%=c_Values class=R2%>" placeholder="Resistor" disabled>
+      <label>Transformer</label>
+      <input type="text" value="<%=c_Values.v_a%> VA" placeholder="Transformer" disabled>
+      <label>Voltage Regulator</label>
+      <input type="text" value="LM317" placeholder="Voltage Regulator" disabled>
+  </form>
+   
+</div>
 
-      <div class="w3-container list-group-item list-group-item- ">
-        <center><h2>OUTPUT</h2></center>
-      </div><br>
-
-      <form class="">
-        <fieldset disabled>
-          <div class="form-group">
-            <label for="disabledTextInput">Capacitor (C1)</label>
-            <input type="text" id="Capacitor" class="form-control"  value=" <%=c_Values.c%>"  placeholder="Capacitor">
-          </div>
-          <fieldset disabled>
-          <div class="form-group">
-            <label for="disabledTextInput">Transformer</label>
-            <input type="text" id="Transformer" class="form-control"  value=" <%=c_Values.v_a%> VA" placeholder="Transformer">
-          </div>
-      <fieldset disabled>
-          <div class="form-group">
-            <label for="disabledTextInput">Voltage Regulator</label>
-            <input type="text" id="Voltage Regulator" class="form-control" value=" <%=c_Values.img_label%>" placeholder="Voltage Regulator">
-          </div>
-      </form>
-   </div>
+<section class="mainpart">
+  <h2></h2>
+</section>
 
     <!-- Page Content -->
     <div class="">
@@ -315,22 +381,19 @@
 
           <area shape="rect" coords="581,538,621,582" href="#" data-placement="top" data-toggle="popover" data-trigger="focus" title="Earthing">
             
-          <area shape="rect" coords="740,119,865,234" href="#" data-placement="top" data-toggle="popover" data-trigger="focus" title="Voltage Regulator: <%=c_Values.img_label%>">
+          <area shape="rect" coords="740,119,865,234" href="#" data-placement="top" data-toggle="popover" data-trigger="focus" title="Voltage Regulator: LM317">
                 
           <area shape="rect" coords="1079,324,1113,398" href="#" data-placement="top" data-toggle="popover" data-trigger="focus" title="Load: <%=c_Values.vout%> volt">
         </map>
       </div>
     </div>
     <script>
-      function w3_open()
-      {
-        document.getElementById("mySidebar").style.width = "25%";
-        document.getElementById("mySidebar").style.display = "block";
+      const openNav = () =>{
+          document.getElementById('mySidenav').style.width="220px";
       }
- 
-       function w3_close() {
-        document.getElementById("mySidebar").style.display = "none";
-       }
-    </script>
+      const closeNav = () =>{
+          document.getElementById('mySidenav').style.width="0";
+      }
+   </script>
  </body>
 </html>

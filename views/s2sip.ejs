@@ -73,7 +73,7 @@
       <nav class="navbar navbar-expand-sm aa bg-dark navbar-dark ">
         <ul class="navbar-nav ml-auto ">
           <li class="nav-item ">
-            <a class="nav-link text-success font-weight-bold" href="/logout">Logout</a>
+            <a class="nav-link text-white font-weight-bold" href="/logout">LOGOUT</a>
           </li>
        </ul>
      </nav>
@@ -93,7 +93,7 @@
           <form class="was-validated" action = "/input" method="POST">
             <div class="form-row">
               <div class="col-md-12 mb-8">
-                <label for="v1">Vin(RMS)</label>
+                <label for="v1">Vin</label>
                 <input type="number" class="form-control " name="v1" min="0" max="250" placeholder="(0 - 250) volt" id="v1" required>
                 <div class="invalid-feedback">
                   Please provide a valid value.
@@ -106,13 +106,17 @@
                   Please provide a valid value.
                 </div>
               </div>
-              <div class="col-md-12 mb-8">
+
+              <!--Ambient Temperature is hidden as it was not in use-->
+              <div class="col-md-12 mb-8" hidden>
                 <label for="c3">Ambient Temperature</label>
-                <input type="number" class="form-control " min="0"  max="120"  placeholder="( 0 - 120 )deg. C" name="v3"  id="c3" required> 
+                <input type="number" class="form-control " min="0"  max="120"  placeholder="( 0 - 120 )deg. C" name="v3"  id="c3"> 
                 <div class="invalid-feedback">
                   Please provide a valid value.
                 </div>
               </div>
+              <!--Ambient Temperature is hidden as it was not in use-->
+
               <div class="col-md-12 mb-8">
                 <label for="v3">Vout From</label>
                 <input type="number" name="v4"  class="form-control " min="-35" max="35" placeholder="( -35 to -1.2 ) ( 1.2  to  35 )." id="v3" required>
@@ -138,7 +142,7 @@
           <form class="was-validated" action = "/inputa" method="POST">
             <div class="form-row">
               <div class="col-md-12 mb-8">
-                <label for="c1">Vin(RMS)</label>
+                <label for="c1">Vin</label>
                 <input type="number" name="c1"  class="form-control " min="0" max="250" step="0.1" placeholder="(0 - 250 ) volt" id="c1" required>
                 <div class="invalid-feedback">
                   Please provide a valid value.
@@ -151,12 +155,16 @@
                   lease provide a valid value.
                 </div>
               </div>
-              <div class="col-md-12 mb-8">
+
+              <!--Ambient Temperature is hidden as it was not in use-->
+              <div class="col-md-12 mb-8" hidden>
                 <label for="c3">Ambient Temperature</label>
-                <input type="number" class="form-control " step="0.1" min="0"  max="120"  placeholder="( 0 - 120 )deg. C" id="c3" name="c3" required> 
+                <input type="number" class="form-control " step="0.1" min="0"  max="120"  placeholder="( 0 - 120 )deg. C" id="c3" name="c3"> 
                 <div class="invalid-feedback">
                   Please provide a valid value.
                 </div>
+                <!--Ambient Temperature is hidden as it was not in use-->
+
               </div>
               <div class="col-md-12 mb-8">
                 <label for="c3">Vout</label>
