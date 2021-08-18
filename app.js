@@ -117,11 +117,11 @@ app.post("/inputa", async (req, res) => {
       v_out === -18
     ) {
       let c = await rel_Value.relativeValue(calvalue.c);
-      calValue.c = c;
+      calvalue.c = c;
       res.render("CN79", { c_Values: calvalue });
     } else {
       let c = await rel_Value.relativeValue(calValue.c);
-      calValue.c = c;
+      calvalue.c = c;
       res.render("CN337", { c_Values: calvalue });
     }
   }
