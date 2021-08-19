@@ -8,6 +8,9 @@ exports.variable = (v1, v2, v3, v4, v5) => {
   const dp = Number(1);
   const I_s_rms = 1.8;
 
+  //NOTE: steps for finding value for each coondition is almost same with some variation
+
+  //condition for voutfrom and voutTo given that both value is negative or positive
   if ((voutfrom < 0 && voutTo < 0) || (voutfrom > 0 && voutTo > 0)) {
     const vout = voutfrom > voutTo ? voutfrom : voutTo;
     const RR = vout < 0 ? 70 : 66;
@@ -23,9 +26,7 @@ exports.variable = (v1, v2, v3, v4, v5) => {
     const v_in_max = v_in + 10;
     const v_in_min = v_in - 10;
     const v_rms = ((v_rpp_in_max + 2 + 0.005) / (1.424 * 0.9)) * (v_in_max / v_in_min);
-    // const v_in_rms = Math.pow(Math.pow((v_in_max + v_in_min, 2)/8) ,0.5) ;
     const v_in_rms = Math.pow(Math.pow((v_in_max + v_in_min) / 2, 2) / 2, 0.5);
-    // v_in = 2 * v_in_reg_max;
     const v_a = v_in * I_s_rms;
     const R2 = R1 * (Math.abs(vout) / 1.25) - 1;
 
@@ -34,14 +35,15 @@ exports.variable = (v1, v2, v3, v4, v5) => {
 
     const img_label = v + suffix;
 
-    // v_a ,R2 , 7905 , v_in
     return { v_a, R2, vout, voutTo, v_in, c, img_label, freq };
-  } //vout , voutTo , r2 , img_label , c
+  }
+  //condition for voutfrom and voutTo given that either of its value is negative or positive. find for both the values
   else {
     const vout_neg = voutfrom < 0 ? voutfrom : voutTo;
     const vout_psv = voutfrom > 0 ? voutfrom : voutTo;
     var v_neg;
     var v_psv;
+    // condition for either voutfrom or voutTo negative
     if (vout_neg) {
       const vout = vout_neg;
       const RR = vout < 0 ? 70 : 66;
@@ -56,9 +58,7 @@ exports.variable = (v1, v2, v3, v4, v5) => {
       const v_in_max = v_in + 10;
       const v_in_min = v_in - 10;
       const v_rms = ((v_rpp_in_max + 2 + 0.005) / (1.424 * 0.9)) * (v_in_max / v_in_min);
-      // const v_in_rms = Math.pow(Math.pow((v_in_max + v_in_min, 2)/8) ,0.5) ;
       const v_in_rms = Math.pow(Math.pow((v_in_max + v_in_min) / 2, 2) / 2, 0.5);
-      // v_in = 2 * v_in_reg_max;
       const v_a = v_in * I_s_rms;
       const R2 = R1 * (Math.abs(vout) / 1.25) - 1;
 
@@ -67,9 +67,10 @@ exports.variable = (v1, v2, v3, v4, v5) => {
 
       const img_label = v + suffix;
 
-      // v_a ,R2 , 7905 , v_in
       v_neg = { v_a, R2, vout, v_in, c, img_label, freq };
     }
+    // condition for either voutfrom or voutTo positive
+
     if (vout_psv) {
       const vout = vout_psv;
       const RR = vout < 0 ? 70 : 66;
@@ -84,7 +85,6 @@ exports.variable = (v1, v2, v3, v4, v5) => {
       const v_in_max = v_in + 10;
       const v_in_min = v_in - 10;
       const v_rms = ((v_rpp_in_max + 2 + 0.005) / (1.424 * 0.9)) * (v_in_max / v_in_min);
-      // const v_in_rms = Math.pow(Math.pow((v_in_max + v_in_min, 2)/8) ,0.5) ;
       const v_in_rms = Math.pow(Math.pow((v_in_max + v_in_min) / 2, 2) / 2, 0.5);
       // v_in = 2 * v_in_reg_max;
       const v_a = v_in * I_s_rms;
@@ -95,15 +95,21 @@ exports.variable = (v1, v2, v3, v4, v5) => {
 
       const img_label = v + suffix;
 
-      // v_a ,R2 , 7905 , v_in
       v_psv = { v_a, R2, vout, v_in, c, img_label, freq };
     }
     return { v_psv, v_neg };
   }
-
-  // const R2 = R1 * (Math.abs(vout) / 1.25);
-  //  V_rpp_in_c = V_rpp_in_max
 };
+
+// const R2 = R1 * (Math.abs(vout) / 1.25);
+//  V_rpp_in_c = V_rpp_in_max
+// v_a ,R2 , 7905 , v_in
+
+// const v_in_rms = Math.pow(Math.pow((v_in_max + v_in_min, 2)/8) ,0.5) ;
+
+// v_in = 2 * v_in_reg_max;
+
+// const v_in_rms = Math.pow(Math.pow((v_in_max + v_in_min, 2)/8) ,0.5) ;
 
 // not in use
 // const I_d_av = I_l * (1 + value);

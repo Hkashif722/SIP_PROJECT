@@ -120,7 +120,7 @@ app.post("/inputa", async (req, res) => {
       calvalue.c = c;
       res.render("CN79", { c_Values: calvalue });
     } else {
-      let c = await rel_Value.relativeValue(calValue.c);
+      let c = await rel_Value.relativeValue(calvalue.c);
       calvalue.c = c;
       res.render("CN337", { c_Values: calvalue });
     }
@@ -168,6 +168,6 @@ app.get("/logout", (req, res) => {
   res.redirect("/");
 });
 
-app.listen("3001", () => {
+app.listen("3000", () => {
   console.log("server is up and running");
 });

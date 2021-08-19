@@ -8,6 +8,7 @@ const valueSchema = {
 };
 
 const Value = mongoose.model("Value", valueSchema);
+// to find exact c value from database w.r.t given value
 
 exports.relativeValue = async (c_value) => {
   var result = await Value.find({ value: { $gte: c_value, $lt: c_value + 100 } }).exec();
