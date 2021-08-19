@@ -84,7 +84,7 @@ app.post("/inputa", async (req, res) => {
   let value = req.body;
   let calvalue = constCalc.constant(value.c1, value.c2, value.c3, value.c4);
   let v_out = calvalue.vout;
-  console.log(calvalue);
+
   // +ve 7800
   if (v_out > 0) {
     if (
