@@ -35,7 +35,7 @@ exports.variable = (v1, v2, v3, v4, v5) => {
 
     const img_label = v + suffix;
 
-    return { v_a, R2, vout, voutTo, v_in, c, img_label, freq };
+    return { v_a, R2, voutTo, voutfrom, v_in, c, img_label, freq };
   }
   //condition for voutfrom and voutTo given that either of its value is negative or positive. find for both the values
   else {
