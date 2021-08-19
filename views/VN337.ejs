@@ -278,7 +278,7 @@
 
     <div class="titlebar" style="margin-bottom:0">
       <h1> CIRCUITATION </h1>
-      <h4>A Circuit Design Provider And Simulation Website</h4> 
+      <h4>A Circuit Schema Provider</h4> 
     </div>
 
     <header>
@@ -302,14 +302,14 @@
           <input type="text" value="<%=c_Values.v_in%> volt" placeholder="Vin" disabled>
           <label>Frequency</label>
           <input type="text" value="<%=c_Values.freq%> Hz"  placeholder="Frequency" disabled>
-          <label >VOut From</label>
+          <label >Vout From</label>
           <input type="text" value="<%=c_Values.vout%> volt" placeholder="VOut From" disabled>
-          <label >VOut To</label>
-          <input type="text" value="<%=c_Values.vout%>" placeholder="VOut To" disabled>  
+          <label >Vout To</label>
+          <input type="text" value="<%=c_Values.voutTo%> volt" placeholder="VOut To" disabled>  
         <br>
           <a>OUTPUT</a>
           <label>Capacitor (C1)</label>
-          <input type="text" value="<%=c_Values.c%>"  placeholder="Capacitor" disabled>
+          <input type="text" value="<%=c_Values.c%> &#181F"  placeholder="Capacitor" disabled>
           <label>Resistor</label>
           <input type="text" value="<%=c_Values.R2%> ohm" placeholder="Resistor" disabled>
           <label>Transformer</label>
@@ -319,12 +319,7 @@
       </form>
       
     </div>
-
-    <section class="mainpart">
-      <h2></h2>
-    </section>
-    
-
+  
     <!-- Page Content -->
     <div class="">
 
@@ -344,7 +339,7 @@
           <area shape="rect" coords="418,170,461,238" href="#" data-placement="top"  data-toggle="popover" data-trigger="focus" title="Diode 4: 1N4501">
           <area shape="rect" coords="818,512,867,580" href="#" data-placement="top"  data-toggle="popover" data-trigger="focus" title="Diode 5: 1N4501">
 
-          <area shape="rect" coords="893,169,949,240" href="#" data-placement="top"  data-toggle="popover" data-trigger="focus" title="Resistor 1:<%=c_Values.R2%> ohm">
+          <area shape="rect" coords="893,169,949,240" href="#" data-placement="top"  data-toggle="popover" data-trigger="focus" title="Resistor 1: <%=c_Values.R2%> ohm">
           <area shape="rect" coords="894,331,942,396" href="#" data-placement="top"  data-toggle="popover" data-trigger="focus" title="Resistor 2: 120 ohm">
 
           <area shape="rect" coords="620,255,650,320" href="#" data-placement="top"  data-toggle="popover" data-trigger="focus" title="Capacitor 1: <%=c_Values.c%> micro-farad" >
@@ -359,7 +354,7 @@
 
           <area shape="rect" coords="692,73,742,130"  href="#" data-placement="top"  data-toggle="popover" data-trigger="focus" title="Earthing">
 
-          <area shape="rect" coords="1085,256,1120,319"href="#"data-placement="top"  data-toggle="popover" data-trigger="focus" title="Load:<%=c_Values.vout%> volt">
+          <area shape="rect" coords="1085,256,1120,319"href="#"data-placement="top"  data-toggle="popover" data-trigger="focus" title="Load: <%=c_Values.vout%> volt">
 
           <area shape="rect" coords="781,382,907,478" href="#" data-placement="top"  data-toggle="popover" data-trigger="focus" title="Voltage Regulator: LM337">
         </map>

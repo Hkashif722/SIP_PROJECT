@@ -277,7 +277,7 @@
   <body>
     <div class="titlebar" style="margin-bottom:0">
       <h1> CIRCUITATION </h1>
-      <h4>A Circuit Design Provider And Simulation Website</h4> 
+      <h4>A Circuit Schema Provider</h4> 
     </div>
 
     <header>
@@ -300,14 +300,14 @@
           <input type="text" value="<%=c_Values.v_in%> volt" placeholder="Vin" disabled>
           <label>Frequency</label>
           <input type="text" value="<%=c_Values.freq%> Hz"  placeholder="Frequency" disabled>
-          <label >VOut From</label>
+          <label >Vout From</label>
           <input type="text" value="<%=c_Values.vout%> volt" placeholder="VOut From" disabled>
-          <label >VOut To</label>
-          <input type="text" value="<%=c_Values.vout%>" placeholder="VOut To" disabled>  
+          <label >Vout To</label>
+          <input type="text" value="<%=c_Values.voutTo%> volt" placeholder="VOut To" disabled>  
         <br>
           <a>OUTPUT</a>
           <label>Capacitor (C1)</label>
-          <input type="text" value="<%=c_Values.c%>"  placeholder="Capacitor" disabled>
+          <input type="text" value="<%=c_Values.c%> &#181F"  placeholder="Capacitor" disabled>
           <label>Resistor</label>
           <input type="text" value="<%=c_Values.R2%> ohm" placeholder="Resistor" disabled>
           <label>Transformer</label>
@@ -353,9 +353,9 @@
 
           <area shape="rect" coords="3,254,60,412"     href="#" data-placement="top" data-toggle="popover" data-trigger="focus "title="Power Supply: <%=c_Values.v_in%> volt">
 
-          <area shape="rect" coords="578,544,626,590"  href="#" data-placement="top" data-toggle="popover" data-trigger="focus" title="Earthing:">
+          <area shape="rect" coords="578,544,626,590"  href="#" data-placement="top" data-toggle="popover" data-trigger="focus" title="Earthing">
 
-          <area shape="rect" coords="1081,324,1117,402"href="#" data-placement="top" data-toggle="popover" data-trigger="focus" title="Load:<%=c_Values.vout%> volt ">
+          <area shape="rect" coords="1081,324,1117,402"href="#" data-placement="top" data-toggle="popover" data-trigger="focus" title="Load: <%=c_Values.vout%> volt ">
 
           <area shape="rect" coords="715,107,881,234"  href="#" data-placement="top" data-toggle="popover" data-trigger="focus" title="Voltage Regulator: LM317">
       </map>
