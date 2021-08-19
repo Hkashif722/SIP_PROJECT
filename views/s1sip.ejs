@@ -840,7 +840,7 @@
 
       @media (min-width: 768px) and (max-width: 991px) {
         header {
-          padding: 15px 40px;
+          padding: 20px 20px;
         }
         header .logo {
           font-size: 20px;
@@ -876,45 +876,6 @@
           font-weight: 700;
           letter-spacing: 3px;
           margin-left: 0;
-        }
-
-        header .navigation {
-          position: fixed;
-          top: 0;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          background: #000;
-          z-index: 10;
-          display: none;
-          justify-content: center;
-          align-items: center;
-          flex-direction: column;
-        }
-        header .navigation.active {
-          display: flex;
-        }
-        header .navigation li a {
-          font-size: 24px;
-          margin: 10px 0;
-        }
-
-        .toggleMenu {
-          position: relative;
-          width: 30px;
-          height: 30px;
-          background: url(/home/menu.png);
-          background-position: center;
-          background-size: 30px;
-          background-repeat: no-repeat;
-          cursor: pointer;
-          z-index: 11;
-        }
-        .toggleMenu.active {
-          background: url(/home/close.png);
-          background-position: center;
-          background-size: 25px;
-          background-repeat: no-repeat;
         }
 
         /*.................Circuit..................*/
@@ -1005,6 +966,7 @@
         }
 
         .toggleMenu {
+          left: 5% ;
           position: relative;
           width: 30px;
           height: 30px;
@@ -1016,10 +978,14 @@
           z-index: 11;
         }
         .toggleMenu.active {
+          left: 80%;
+          margin-top: 8%;
+          margin-left: 5%;
           background: url(/home/close.png);
           background-position: center;
           background-size: 25px;
           background-repeat: no-repeat;
+          position: fixed;
         }
 
         /*.................Circuit..................*/
@@ -1107,6 +1073,7 @@
         }
 
         .toggleMenu {
+          left: 5% ;
           position: relative;
           width: 30px;
           height: 30px;
@@ -1118,10 +1085,14 @@
           z-index: 11;
         }
         .toggleMenu.active {
+          left: 80%;
+          margin-top: 8%;
+          margin-left: 5%;
           background: url(/home/close.png);
           background-position: center;
           background-size: 25px;
           background-repeat: no-repeat;
+          position: fixed;
         }
 
         /*.................Circuit..................*/
@@ -1206,6 +1177,7 @@
         }
 
         .toggleMenu {
+          left: 5% ;
           position: relative;
           width: 30px;
           height: 30px;
@@ -1217,10 +1189,14 @@
           z-index: 11;
         }
         .toggleMenu.active {
+          left: 80%;
+          margin-top: 8%;
+          margin-left: 5%;
           background: url(/home/close.png);
           background-position: center;
           background-size: 25px;
           background-repeat: no-repeat;
+          position: fixed;
         }
 
         /*.................Circuit..................*/
@@ -1317,6 +1293,7 @@
           margin: 10px 0;
         }
         .toggleMenu {
+          left: 15% ;
           position: relative;
           width: 30px;
           height: 30px;
@@ -1328,10 +1305,15 @@
           z-index: 11;
         }
         .toggleMenu.active {
+          left: 80%;
+          margin-top: 8%;
+          margin-left: 5%;
+          position: fixed;
           background: url(/home/close.png);
           background-position: center;
           background-size: 25px;
           background-repeat: no-repeat;
+         
         }
 
         /*.................Circuit..................*/
@@ -1370,7 +1352,7 @@
   <body>
     <div class="first">
       <header>
-        <a href="#" class="logo">Circuitation</a>
+        <a href="/" class="logo">Circuitation</a>
         <div class="toggleMenu" onclick="toggleMenu();"></div>
         <ul class="navigation">
           <li><a href="#Home" name="scroll-to-Home" id="scroll-to-Home">Home</a></li>
@@ -1529,8 +1511,8 @@
     <script type="text/javascript">
       function toggleMenu() {
         const toggleMenu = document.querySelector(".toggleMenu");
-        const navigation = document.querySelector(".navigation");
         toggleMenu.classList.toggle("active");
+        const navigation = document.querySelector(".navigation");
         navigation.classList.toggle("active");
       }
     </script>
