@@ -125,6 +125,7 @@
       font-weight: 700;
       letter-spacing: 8px;
     }
+    
     @media (min-width: 1801px) and (max-width: 2100px){
       .imagebox{
           margin-left: 30%;
@@ -294,14 +295,13 @@
             <a class="back" href="/page">BACK</a>
             <a class="back" href="/logout">LOGOUT</a>
           </div>
-          
       </div>
    </header>
    <!-- Sidebar -->
    <div class="sidenav" id="mySidenav">
           <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
           <a>USER INPUT</a>
-          <form>
+        <form>
           <label>Vin<br></label>
           <input type="text" value="<%=c_Values.v_in%> volt" placeholder="Vin" disabled>
           <label>Frequency</label>
@@ -312,19 +312,22 @@
          <br>
           <a>OUTPUT</a>
           <label>Capacitor (C1)</label>
-          <input type="text" value="<%=c_Values.c%> &#181F"  placeholder="Capacitor" disabled>
+          <input type="text" value="<%=c_Values.c%> &#181F"  placeholder="Capacitor 1" disabled>
+          <label>Capacitor (C2)</label>
+          <input type="text" value="0.22 &#181F"  placeholder="Capacitor 2" disabled>
+          <label>Capacitor (C3)</label>
+          <input type="text" value="0.1 &#181F"  placeholder="Capacitor 3" disabled>
+          <label>Capacitor (C4)</label>
+          <input type="text" value="10 &#181F"  placeholder="Capacitor 4" disabled>
           <label>Transformer</label>
           <input type="text" value="<%=c_Values.v_a%> VA" placeholder="Transformer" disabled>
+          <label>Load</label>
+          <input type="text" value="<%=c_Values.vout%> volt"  placeholder="Load" disabled>
           <label>Voltage Regulator</label>
           <input type="text" value="<%=c_Values.img_label%>" placeholder="Voltage Regulator" disabled>
-      </form>
-       
-  </div>
+       </form>
+    </div>
   
-  <section class="mainpart">
-      <h2></h2>
-  </section>
-
     <!-- Page Content -->
       <div class="imagebox">
         <br><br>

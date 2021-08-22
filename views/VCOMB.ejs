@@ -123,6 +123,7 @@
       font-weight: 700;
       letter-spacing: 8px;
     }
+    
     @media (min-width: 1801px) and (max-width: 2100px){
       .imagebox{
           margin-left: 30%;
@@ -304,41 +305,58 @@
           <input type="text" value="<%=c_Values.v_psv.vout%> volt" placeholder="Vout From" disabled>
           <label >Vout To</label>
           <input type="text" value="<%=c_Values.v_neg.vout%> volt" placeholder="Vout To" disabled>  
-        <br>
+          <br>
           <a>POSITIVE OUTPUT</a>
           <label>Capacitor (C1)</label>
-          <input type="text" value="<%=c_Values.v_psv.c%> &#181F"  placeholder="Capacitor 1" disabled>
+            <input type="text" value="<%=c_Values.v_psv.c%> &#181F"  placeholder="Capacitor 1" disabled>
+          <label>Capacitor (C3)</label>
+            <input type="text" value="10 &#181F"  placeholder="Capacitor 3" disabled>
+          <label>Capacitor (C5)</label>
+            <input type="text" value="10 &#181F"  placeholder="Capacitor 5" disabled>
+          <label>Capacitor (C7)</label>
+            <input type="text" value="10 &#181F"  placeholder="Capacitor 7" disabled>
+          <label>Capacitor (C9)</label>
+            <input type="text" value="10 &#181F"  placeholder="Capacitor 9" disabled>
+          <label>Capacitor (C11)</label>
+            <input type="text" value="10 &#181F"  placeholder="Capacitor 11" disabled>
+          <label>Resistor (R1)</label>
+            <input type="text" value="120 ohm" placeholder="Resistor 1" disabled>
           <label>Resistor (R2)</label>
-          <input type="text" value="<%=c_Values.v_psv.R2%> ohm" placeholder="Resistor" disabled>
+            <input type="text" value="<%=c_Values.v_psv.R2%> ohm" placeholder="Resistor 2" disabled>
           <label>Transformer</label>
-          <input type="text" value="<%=c_Values.v_psv.v_a%> VA" placeholder="Transformer" disabled>
+            <input type="text" value="<%=c_Values.v_psv.v_a%> VA" placeholder="Transformer" disabled>
+          <label>Load</label>
+            <input type="text" value="<%=c_Values.v_psv.vout%> volt"  placeholder="Load" disabled>
           <label>Voltage Regulator</label>
-          <input type="text" value="LM317" placeholder="Voltage Regulator" disabled>
+            <input type="text" value="LM317" placeholder="Voltage Regulator" disabled>
 
           <a>Negative OUTPUT</a>
           <label>Capacitor (C2)</label>
-          <input type="text" value="<%=c_Values.v_neg.c%> &#181F"  placeholder="Capacitor 2" disabled>
+            <input type="text" value="<%=c_Values.v_neg.c%> &#181F"  placeholder="Capacitor 2" disabled>
+          <label>Capacitor (C4)</label>
+            <input type="text" value="10 &#181F"  placeholder="Capacitor 4" disabled>
+          <label>Capacitor (C6)</label>
+            <input type="text" value="10 &#181F"  placeholder="Capacitor 6" disabled>
+          <label>Capacitor (C8)</label>
+            <input type="text" value="10 &#181F"  placeholder="Capacitor 8" disabled>
+          <label>Capacitor (C10)</label>
+            <input type="text" value="10 &#181F"  placeholder="Capacitor 10" disabled>
+          <label>Capacitor (C12)</label>
+            <input type="text" value="10 &#181F"  placeholder="Capacitor 12" disabled>
           <label>Resistor (R3)</label>
-          <input type="text" value="<%=c_Values.v_neg.R2%> ohm" placeholder="Resistor" disabled>
+          <input type="text" value="<%=c_Values.v_neg.R2%> ohm" placeholder="Resistor 3" disabled>
+          <label>Resistor (R4)</label>
+          <input type="text" value="120 ohm" placeholder="Resistor 4" disabled>
           <label>Transformer</label>
           <input type="text" value="<%=c_Values.v_psv.v_a%> VA" placeholder="Transformer" disabled>
+          <label>Load</label>
+            <input type="text" value="<%=c_Values.v_neg.vout%> volt"  placeholder="Load" disabled>
           <label>Voltage Regulator</label>
           <input type="text" value="LM337" placeholder="Voltage Regulator" disabled>
       </form>
-      
     </div>
 
-    <section class="mainpart">
-      <h2></h2>
-    </section>
-
     <!-- Page Content -->
-    <div class="">
-
-      <div class="w3-container">
-        <h1></h1>
-      </div>
-
       <div class="imagebox">
         <br><br>
 
@@ -359,15 +377,15 @@
 
           <area shape="rect" coords="329,165,385,232"   href="#" data-placement="top"  data-toggle="popover"  data-trigger="focus" title="Capacitor 1: <%=c_Values.v_psv.c%> micro-farad">
           <area shape="rect" coords="328,357,388,426"   href="#" data-placement="top"  data-toggle="popover"  data-trigger="focus" title="Capacitor 2: <%=c_Values.v_neg.c%> micro-farad">
-          <area shape="rect" coords="413,164,467,231"   href="#" data-placement="top"  data-toggle="popover"  data-trigger="focus" title="Capacitor 3: micro-farad">
+          <area shape="rect" coords="413,164,467,231"   href="#" data-placement="top"  data-toggle="popover"  data-trigger="focus" title="Capacitor 3: 10 micro-farad">
           <area shape="rect" coords="412,357,470,422"   href="#" data-placement="top"  data-toggle="popover"  data-trigger="focus" title="Capacitor 4: 0.1 micro-farad">
-          <area shape="rect" coords="477,163,530,229"   href="#" data-placement="top"  data-toggle="popover"  data-trigger="focus" title="Capacitor 5: micro-farad">
+          <area shape="rect" coords="477,163,530,229"   href="#" data-placement="top"  data-toggle="popover"  data-trigger="focus" title="Capacitor 5: 10 micro-farad">
           <area shape="rect" coords="476,357,535,422"   href="#" data-placement="top"  data-toggle="popover"  data-trigger="focus" title="Capacitor 6: 10 micro-farad">
-          <area shape="rect" coords="601,201,663,263"   href="#" data-placement="top"  data-toggle="popover"  data-trigger="focus" title="Capacitor 7: micro-farad">
+          <area shape="rect" coords="601,201,663,263"   href="#" data-placement="top"  data-toggle="popover"  data-trigger="focus" title="Capacitor 7: 10 micro-farad">
           <area shape="rect" coords="599,327,662,385"   href="#" data-placement="top"  data-toggle="popover"  data-trigger="focus" title="Capacitor 8: 10 micro-farad">
-          <area shape="rect" coords="805,164,865,231"   href="#" data-placement="top"  data-toggle="popover"  data-trigger="focus" title="Capacitor 9: micro-farad">
+          <area shape="rect" coords="805,164,865,231"   href="#" data-placement="top"  data-toggle="popover"  data-trigger="focus" title="Capacitor 9: 10 micro-farad">
           <area shape="rect" coords="804,356,865,424"   href="#" data-placement="top"  data-toggle="popover"  data-trigger="focus" title="Capacitor 10: 10 micro-farad">
-          <area shape="rect" coords="883,164,945,230"   href="#" data-placement="top"  data-toggle="popover"  data-trigger="focus" title="Capacitor 11: micro-farad">
+          <area shape="rect" coords="883,164,945,230"   href="#" data-placement="top"  data-toggle="popover"  data-trigger="focus" title="Capacitor 11: 10 micro-farad">
           <area shape="rect" coords="882,358,950,423"   href="#" data-placement="top"  data-toggle="popover"  data-trigger="focus" title="Capacitor 12: 10 micro-farad">
           
           <area shape="rect" coords="68,182,138,370"    href="#" data-placement="top"  data-toggle="popover"  data-trigger="focus" title="Transformer: <%=c_Values.v_psv.v_a%> VA">
@@ -386,8 +404,8 @@
 
           <area shape="rect" coords="1065,465,1121,502" href="#" data-placement="top"  data-toggle="popover"  data-trigger="focus" title="Negative Output">
         </map>
-      </div>
     </div>
+
     <script>
       const openNav = () =>{
           document.getElementById('mySidenav').style.width="280px";

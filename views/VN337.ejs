@@ -299,34 +299,40 @@
       <a>USER INPUT</a>
       <form>
           <label>Vin<br></label>
-          <input type="text" value="<%=c_Values.v_in%> volt" placeholder="Vin" disabled>
+            <input type="text" value="<%=c_Values.v_in%> volt" placeholder="Vin" disabled>
           <label>Frequency</label>
-          <input type="text" value="<%=c_Values.freq%> Hz"  placeholder="Frequency" disabled>
+            <input type="text" value="<%=c_Values.freq%> Hz"  placeholder="Frequency" disabled>
           <label >Vout From</label>
-          <input type="text" value="<%=c_Values.voutfrom%> volt" placeholder="VOut From" disabled>
+            <input type="text" value="<%=c_Values.voutfrom%> volt" placeholder="Vout From" disabled>
           <label >Vout To</label>
-          <input type="text" value="<%=c_Values.voutTo%> volt" placeholder="VOut To" disabled>  
-        <br>
+            <input type="text" value="<%=c_Values.voutTo%> volt" placeholder="Vout To" disabled>  
+          <br>
+
           <a>OUTPUT</a>
           <label>Capacitor (C1)</label>
-          <input type="text" value="<%=c_Values.c%> &#181F"  placeholder="Capacitor" disabled>
-          <label>Resistor</label>
-          <input type="text" value="<%=c_Values.R2%> ohm" placeholder="Resistor" disabled>
+            <input type="text" value="<%=c_Values.c%> &#181F"  placeholder="Capacitor 1" disabled>
+          <label>Capacitor (C2)</label>
+            <input type="text" value="0.1 &#181F"  placeholder="Capacitor 2" disabled>
+          <label>Capacitor (C3)</label>
+            <input type="text" value="10 &#181F"  placeholder="Capacitor 3" disabled>
+          <label>Capacitor (C4)</label>
+            <input type="text" value="10 &#181F"  placeholder="Capacitor 4" disabled>
+          <label>Capacitor (C5)</label>
+            <input type="text" value="10 &#181F"  placeholder="Capacitor 5" disabled>
+          <label>Resistor (R1)</label>
+            <input type="text" value="<%=c_Values.R2%> ohm" placeholder="Resistor 1" disabled>
+          <label>Resistor (R2)</label>
+            <input type="text" value="120 ohm" placeholder="Resistor 2" disabled>
           <label>Transformer</label>
-          <input type="text" value="<%=c_Values.v_a%> VA" placeholder="Transformer" disabled>
+            <input type="text" value="<%=c_Values.v_a%> VA" placeholder="Transformer" disabled>
+          <label>Load</label>
+            <input type="text" value="<%=c_Values.vout%> volt"  placeholder="Load" disabled>
           <label>Voltage Regulator</label>
-          <input type="text" value="LM337" placeholder="Voltage Regulator" disabled>
+            <input type="text" value="LM337" placeholder="Voltage Regulator" disabled>
       </form>
-      
     </div>
   
     <!-- Page Content -->
-    <div class="">
-
-      <div class="w3-container">
-        <h1></h1>
-      </div>
-
       <div class="imagebox">
          <br><br>
 
@@ -359,7 +365,7 @@
           <area shape="rect" coords="781,382,907,478" href="#" data-placement="top"  data-toggle="popover" data-trigger="focus" title="Voltage Regulator: LM337">
         </map>
       </div>
-    </div>
+    
     <script>
       const openNav = () =>{
           document.getElementById('mySidenav').style.width="220px";

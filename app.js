@@ -35,17 +35,6 @@ const userSchema = new mongoose.Schema({
   password: String,
 });
 
-// const valueSchema = {
-//   value: Number,
-// };
-
-// const Value = mongoose.model("Value", valueSchema);
-// let x = Number(1350);
-// Value.find((err, docs) => {
-//   //console.log(docs);
-//   //console.log(varCalc.absValue(docs, x));
-// });
-
 userSchema.plugin(passportLocalMongoose);
 
 const User = mongoose.model("User", userSchema);
@@ -55,9 +44,6 @@ passport.deserializeUser(User.deserializeUser());
 
 app.get("/", (req, res) => {
   res.render("s1sip");
-  // Value.find((err, docs) => {
-  //   res.send(docs);
-  // });
 });
 
 app.post("/input", async (req, res) => {
@@ -168,6 +154,6 @@ app.get("/logout", (req, res) => {
   res.redirect("/");
 });
 
-app.listen("3000", () => {
+app.listen("3001", () => {
   console.log("server is up and running");
 });
