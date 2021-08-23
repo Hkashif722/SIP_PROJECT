@@ -297,7 +297,6 @@
             <a class="back" href="/page">BACK</a>
             <a class="back" href="/logout">LOGOUT</a>
         </div>
-          
       </div>
     </header>
     <!-- Sidebar -->
@@ -306,38 +305,36 @@
       <a>USER INPUT</a>
       <form>
           <label>Vin<br></label>
-          <input type="text" value="<%=c_Values.v_in%> volt" placeholder="Vin" disabled>
+            <input type="text" value="<%=c_Values.v_in%> volt" placeholder="Vin" disabled>
           <label>Frequency</label>
-          <input type="text" value="<%=c_Values.freq%> Hz"  placeholder="Frequency" disabled>
+            <input type="text" value="<%=c_Values.freq%> Hz"  placeholder="Frequency" disabled>
           <label >Vout</label>
-          <input type="text" value="<%=c_Values.vout%> volt" placeholder="VOut" disabled>  
-        <br>
+            <input type="text" value="<%=c_Values.vout%> volt" placeholder="VOut" disabled>  
+          <br>
           <a>OUTPUT</a>
           <label>Capacitor (C1)</label>
-          <input type="text" value="<%=c_Values.c%> &#181F"  placeholder="Capacitor" disabled>
+            <input type="text" value="<%=c_Values.c%> &#181F"  placeholder="Capacitor" disabled>
+          <label>Capacitor (C2)</label>
+            <input type="text" value="2.2 &#181F"  placeholder="Capacitor 2" disabled>
+          <label>Capacitor (C3)</label>
+            <input type="text" value="1 &#181F"  placeholder="Capacitor 3" disabled>
+          <label>Capacitor (C4)</label>
+            <input type="text" value="10 &#181F"  placeholder="Capacitor 4" disabled>
           <label>Transformer</label>
-          <input type="text" value="<%=c_Values.v_a%> VA" placeholder="Transformer" disabled>
+            <input type="text" value="<%=c_Values.v_a%> VA" placeholder="Transformer" disabled>
+          <label>Load</label>
+            <input type="text" value="<%=c_Values.vout%> volt"  placeholder="Load" disabled>
           <label>Voltage Regulator</label>
-          <input type="text" value="<%=c_Values.img_label%>" placeholder="Voltage Regulator" disabled>
+            <input type="text" value="<%=c_Values.img_label%>" placeholder="Voltage Regulator" disabled>
       </form>
-      
     </div>
 
-    <section class="mainpart">
-      <h2></h2>
-    </section>
-
   <!-- Page Content -->
-    <div class="">
-
-      <div class="w3-container">
-        <h1></h1>
-      </div>
 
      <div class="imagebox">
        <br><br>
 
-       <img src="circuita/CN79.png" alt="Workplace" usemap="#workmap" width="1124" height="591">
+        <img src="circuita/CN79.png" alt="Workplace" usemap="#workmap" width="1124" height="591">
         <map  name="workmap">
           <area shape="rect" coords="236,22,310,101"    href="#" data-placement="top"  data-toggle="popover" data-trigger="focus" title="Diode 1: 1N5401">
           <area shape="rect" coords="387,22,458,101"    href="#" data-placement="top"  data-toggle="popover" data-trigger="focus" title="Diode 2: 1N5401">
@@ -361,7 +358,8 @@
           <area shape="rect" coords="694,428,831,517"   href="#" data-placement="top"  data-toggle="popover" data-trigger="focus" title="Voltage Regulator : <%=c_Values.img_label%>">
        </map>
      </div>
-     <script>
+
+    <script>
       const openNav = () =>{
           document.getElementById('mySidenav').style.width="220px";
       }

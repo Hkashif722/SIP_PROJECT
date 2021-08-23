@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css"
@@ -157,6 +157,7 @@
         align-items: center;
         background: rgb(32, 31, 31);
         min-height: 2000px;
+        scroll-behavior: auto;
       }
       .Container {
         width: 1100px;
@@ -518,13 +519,14 @@
         /*.................Our Team..................*/
 
         section::before {
-          clip-path: circle(30% at right 80%);
+          clip-path: circle(25% at right 90%);
           top: 35%;
-          left: 0%;
+          left: 5%;
         }
         section::after {
           top: -30%;
-          left: -5%;
+          left: -13%;
+          clip-path: circle(20% at 10% 20%);
         }
       }
 
@@ -583,13 +585,21 @@
 
         section::before {
           clip-path: circle(30% at right 80%);
-          top: 35%;
+          top: 50%;
           left: 0%;
         }
         section::after {
-          top: -30%;
-          left: -5%;
+          top: -35%;
+          left: -15%;
+          clip-path: circle(30% at 10% 20%);
         }
+        .foot{
+        position: absolute;
+        color: grey;
+        margin-left: 40%;
+        margin-top: 100px;
+        text-align: center;
+      }
       }
       @media (min-width: 1501px) and (max-width: 1700px) {
         header {
@@ -640,14 +650,22 @@
         /*.................Our Team..................*/
 
         section::before {
-          clip-path: circle(30% at right 80%);
-          top: 85%;
+          clip-path: circle(30% at right 70%);
+          top: 100%;
           left: 0%;
         }
         section::after {
-          top: -10%;
-          left: -5%;
+          top: 0%;
+          left: -8%;
+          clip-path: circle(20% at 10% 20%);
         }
+        .foot{
+        position: absolute;
+        color: grey;
+        margin-left: 40%;
+        margin-top: 500px;
+        text-align: center;
+      }
       }
 
       @media (min-width: 1301px) and (max-width: 1500px) {
@@ -699,14 +717,22 @@
         /*.................Our Team..................*/
 
         section::before {
-          clip-path: circle(30% at right 80%);
-          top: 85%;
+          clip-path: circle(30% at right 85%);
+          top: 80%;
           left: 0%;
         }
         section::after {
-          top: -10%;
-          left: -5%;
+          top: -20%;
+          left: -12%;
+          clip-path: circle(20% at 10% 20%);
         }
+        .foot{
+        position: absolute;
+        color: grey;
+        margin-left: 38%;
+        margin-top: 400px;
+        text-align: center;
+      }
       }
       @media (min-width: 1101px) and (max-width: 1300px) {
         header {
@@ -769,12 +795,21 @@
         }
         section::before {
           top: 30%;
-          left: -13%;
+          left: 0;
+          clip-path: circle(25% at right 85%);
         }
         section::after {
-          top: -10%;
+          top: -20%;
           left: -8%;
+          clip-path: circle(18% at 10% 20%);
         }
+        .foot{
+        position: absolute;
+        color: grey;
+        margin-left: 35%;
+        margin-top: 200px;
+        text-align: center;
+      }
       }
       @media (min-width: 992px) and (max-width: 1100px) {
         header {
@@ -836,13 +871,22 @@
           width: 100%;
         }
         section::before {
-          top: 30%;
-          left: -13%;
+          top: 15%;
+          left: 0%;
+          clip-path: circle(20% at right 90%);
         }
         section::after {
           top: -10%;
-          left: -8%;
+          left: -1%;
+          clip-path: circle(15% at 10% 15%);
         }
+        .foot{
+        position: absolute;
+        color: grey;
+        margin-left: 35%;
+        margin-top: 120px;
+        text-align: center;
+      }
       }
 
       @media (min-width: 768px) and (max-width: 991px) {
@@ -903,14 +947,22 @@
           height: 1200px;
         }
         section::before {
-          top: 35%;
+          top: 27%;
           left: 0%;
-          clip-path: circle(25% at right 90%);
+          clip-path: circle(20% at right 90%);
         }
         section::after {
           top: -20%;
           left: -10%;
+          clip-path: circle(17% at 10% 30%);
         }
+        .foot{
+        position: absolute;
+        color: grey;
+        margin-left: 30%;
+        margin-top: 230px;
+        text-align: center;
+      }
       }
 
       @media (min-width: 575px) and (max-width: 767px) {
@@ -954,18 +1006,22 @@
         header .navigation {
           position: fixed;
           top: 0;
-          left: 0;
-          right: 0;
           bottom: 0;
+          left: -400px;
+          right: 0;
+          width: 300px;
+          height: 100%;
           background: #000;
           z-index: 10;
-          display: none;
           justify-content: center;
           align-items: center;
           flex-direction: column;
+          cursor: pointer;
+          transition: 0.9s;
         }
         header .navigation.active {
           display: flex;
+          left: 0;
         }
         header .navigation li a {
           font-size: 24px;
@@ -988,6 +1044,7 @@
           left: 80%;
           margin-top: 8%;
           margin-left: 5%;
+          transform: 0.5s;
           background: url(/home/close.png);
           background-position: center;
           background-size: 25px;
@@ -1011,8 +1068,8 @@
         /*.................Our Team..................*/
 
         section::before {
-          top: 280%;
-          left: -15%;
+          top: 300%;
+          left: 0%;
           clip-path: circle(40% at right 90%);
         }
         section::after {
@@ -1020,6 +1077,13 @@
           left: 0%;
           clip-path: circle(30% at 10% 20%);
         }
+        .foot{
+        position: absolute;
+        color: grey;
+        margin-left: 23%;
+        margin-top: 1700px;
+        text-align: center;
+      }
       }
 
       @media (min-width: 480px) and (max-width: 574px) {
@@ -1061,18 +1125,21 @@
         header .navigation {
           position: fixed;
           top: 0;
-          left: 0;
-          right: 0;
           bottom: 0;
+          left: -400px;
+          right: 0;
+          width: 300px;
+          height: 100%;
           background: #000;
           z-index: 10;
-          display: none;
           justify-content: center;
           align-items: center;
           flex-direction: column;
+          cursor: pointer;
+          transition: 0.9s;
         }
         header .navigation.active {
-          display: flex;
+          left: 0;
         }
         header .navigation li a {
           font-size: 24px;
@@ -1095,6 +1162,7 @@
           left: 80%;
           margin-top: 8%;
           margin-left: 5%;
+          transform: 0.5s;
           background: url(/home/close.png);
           background-position: center;
           background-size: 25px;
@@ -1107,6 +1175,7 @@
           width: auto;
           align-items: center;
           margin-left: 10px;
+          transition: 0.5s;
         }
         .Container .Card {
           align-items: center;
@@ -1117,13 +1186,22 @@
         /*.................Our Team..................*/
 
         section::before {
-          top: 280%;
-          left: -10%;
+          top: 300%;
+          left: 0;
+          clip-path: circle(40% at right 90%);
         }
         section::after {
           top: 0%;
-          left: 5%;
+          left: 0;
+          clip-path: circle(25% at 10% 20%);
         }
+        .foot{
+        position: absolute;
+        color: grey;
+        margin-left: 20%;
+        margin-top: 1700px;
+        text-align: center;
+      }
       }
 
       @media (min-width: 340px) and (max-width: 480px) {
@@ -1165,18 +1243,21 @@
         header .navigation {
           position: fixed;
           top: 0;
-          left: 0;
+          left: -300px;
           right: 0;
+          width: 200px;
           bottom: 0;
           background: #000;
           z-index: 10;
-          display: none;
           justify-content: center;
           align-items: center;
           flex-direction: column;
+          cursor: pointer;
+          transition: 0.9s;
         }
         header .navigation.active {
           display: flex;
+          left: 0;
         }
         header .navigation li a {
           font-size: 24px;
@@ -1199,6 +1280,7 @@
           left: 80%;
           margin-top: 8%;
           margin-left: 5%;
+          transform: 0.5s;
           background: url(/home/close.png);
           background-position: center;
           background-size: 25px;
@@ -1234,13 +1316,22 @@
         /*.................Our Team..................*/
 
         section::before {
-          top: 280%;
-          left: -5%;
+          top: 300%;
+          left: 0;
+          clip-path: circle(40% at right 90%);
         }
         section::after {
           top: -10%;
           left: 0%;
+          clip-path: circle(25% at 10% 20%);
         }
+        .foot{
+        position: absolute;
+        color: grey;
+        margin-left: 8%;
+        margin-top: 1700px;
+        text-align: center;
+      }
       }
       @media (min-width: 239px) and (max-width: 339px) {
         header {
@@ -1282,22 +1373,26 @@
         header .navigation {
           position: fixed;
           top: 0;
-          left: 0;
+          left: -300px;
           right: 0;
+          width: 200px;
           bottom: 0;
           background: #000;
           z-index: 10;
-          display: none;
           justify-content: center;
           align-items: center;
           flex-direction: column;
+          cursor: pointer;
+          transition: 0.9s;
         }
         header .navigation.active {
-          display: flex;
+          display:flex;
+          left: 0;
         }
         header .navigation li a {
           font-size: 24px;
           margin: 10px 0;
+      
         }
         .toggleMenu {
           left: 15% ;
@@ -1316,8 +1411,9 @@
           margin-top: 8%;
           margin-left: 5%;
           position: fixed;
+          transform: 0.5s;
           background: url(/home/close.png);
-          background-position: center;
+          background-position: center;  
           background-size: 25px;
           background-repeat: no-repeat;
          
@@ -1346,13 +1442,22 @@
         /*.................Our Team..................*/
 
         section::before {
-          top: 280%;
+          top: 290%;
           left: 5%;
+          clip-path: circle(40% at right 90%);
         }
         section::after {
           top: -10%;
           left: 0%;
+          clip-path: circle(25% at 10% 15%);
         }
+        .foot{
+        position: absolute;
+        color: grey;
+        margin-left: 8%;
+        margin-top: 1600px;
+        text-align: center;
+      }
       }
     </style>
   </head>
@@ -1360,10 +1465,10 @@
     <div class="first">
       <header>
         <a href="/" class="logo">Circuitation</a>
-        <div class="toggleMenu" onclick="toggleMenu();"></div>
-        <ul class="navigation">
+        <div class="toggleMenu" id="toggleMenu" onclick="toggleMenu();"></div>
+        <ul class="navigation" id="navigation">
           <li><a href="#Home" name="scroll-to-Home" id="scroll-to-Home">Home</a></li>
-          <li><a href="#Circuits" name="scroll-to-ourteam" id="scroll-to-ourteam">Circuits</a></li>
+          <li><a href="#Circuits" name="scroll-to-Circuits" id="scroll-to-Circuits">Circuits</a></li>
           <li><a href="#ourteam" name="scroll-to-ourteam" id="scroll-to-ourteam">About Us</a></li>
           <li><a href="/login">Signup</a></li>
           <li><a href="/login">Login</a></li>
@@ -1420,13 +1525,7 @@
           <ul class="scii">
             <li style="--i: 1">
               <a href=https://www.linkedin.com/in/abhishekkumar-prasad-a218a8199
-                ><i class="fa fa-linkedin-square"  style="color: #0e76a8;" aria-hidden="true"></i></i
-              ></a>
-            </li>
-
-            <li style="--i: 2">
-              <a href="https://www.instagram.com/abhishekkumar3949?r=nametag"
-                ><i class="fa fa-envelope" aria-hidden="true"></i></i
+                ><i class="fa fa-linkedin-square" aria-hidden="true"></i></i
               ></a>
             </li>
           </ul>
@@ -1442,13 +1541,7 @@
           <ul class="scii">
             <li style="--i: 1">
               <a href=https://www.linkedin.com/in/kashif-hussain-ba5b0a197
-                ><i class="fa fa-linkedin-square"  style="color: #0e76a8;" aria-hidden="true"></i></i
-              ></a>
-            </li>
-
-            <li style="--i: 2">
-              <a href="https://instagram.com/kashif_hussain90?utm_medium=copy_link"
-                ><i class="fa fa-envelope" aria-hidden="true"></i></i
+                ><i class="fa fa-linkedin-square" aria-hidden="true"></i></i
               ></a>
             </li>
           </ul>
@@ -1463,11 +1556,7 @@
           </div>
           <ul class="scii">
             <li style="--i: 1">
-              <a href="https://www.linkedin.com/in/anushka-sinha-52115a197"><i class="fa fa-linkedin-square"  style="color: #0e76a8;" aria-hidden="true"></i></a>
-            </li>
-
-            <li style="--i: 2">
-              <a href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+              <a href="https://www.linkedin.com/in/anushka-sinha-52115a197"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
             </li>
           </ul>
         </div>
@@ -1481,13 +1570,7 @@
           </div>
           <ul class="scii">
             <li style="--i: 1">
-              <a href="https://www.linkedin.com/in/shashank-nair-555b10197"><i class="fa fa-linkedin-square" style="color: #0e76a8;" aria-hidden="true"></i></a>
-            </li>
-
-            <li style="--i: 2">
-              <a href="https://instagram.com/me_shashanknair?utm_medium=copy_link"
-                ><i class="fa fa-envelope" aria-hidden="true"></i></i
-              ></a>
+              <a href="https://www.linkedin.com/in/shashank-nair-555b10197"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
             </li>
           </ul>
         </div>
@@ -1502,31 +1585,37 @@
           <ul class="scii">
             <li style="--i: 1">
               <a href=https://www.linkedin.com/in/akshay-pande-727b22197
-                ><i class="fa fa-linkedin-square"  style="color: #0e76a8;" aria-hidden="true"></i></i
-              ></a>
-            </li>
-
-            <li style="--i: 2">
-              <a href="https://instagram.com/akshayvpande?utm_medium=copy_link"
-                ><i class="fa fa-envelope" aria-hidden="true"></i></i
+                ><i class="fa fa-linkedin-square" aria-hidden="true"></i></i
               ></a>
             </li>
           </ul>
         </div>
       </div>
+
       <footer>
         <div class="foot">
           <p>Project under Summer Internship Program (2020)</p>
         </div>
       </footer>
     </section>
+
     <script type="text/javascript">
       function toggleMenu() {
         const toggleMenu = document.querySelector(".toggleMenu");
         toggleMenu.classList.toggle("active");
+
+        document.onclick = function(e){
+          if(e.target.id !== 'navigation' && e.target.id !== 'toggleMenu')
+          {
+            toggleMenu.classList.remove("active");
+            navigation.classList.remove("active");
+          }
+        }
+
         const navigation = document.querySelector(".navigation");
         navigation.classList.toggle("active");
       }
     </script>
+    
   </body>
 </html>

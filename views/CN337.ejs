@@ -123,6 +123,7 @@
       font-weight: 700;
       letter-spacing: 8px;
     }
+
     @media (min-width: 1801px) and (max-width: 2100px){
       .imagebox{
           margin-left: 30%;
@@ -258,18 +259,21 @@
           text-align:center;
         }
     }
+
     @media (min-width: 239px) and (max-width: 339px) {
       .imagebox{
           margin-left: 0;
           overflow: scroll;
         }
     }
+
     @media (min-width: 180px) and (max-width: 238px) {
         .imagebox{
           margin-left: 0;
           overflow: scroll;
         }
     }
+
     @media (max-width: 179px) {
         .imagebox{
           margin-left: 0;
@@ -287,12 +291,11 @@
       <div class="tophead">
         <div>
           <span class="menulines" onclick="openNav()">&#9776</span>
-      </div>
-          <div class="brandlogo">
-            <a class="back" href="/page">BACK</a>
-            <a class="back" href="/logout">LOGOUT</a>
-          </div>
-          
+        </div>
+        <div class="brandlogo">
+          <a class="back" href="/page">BACK</a>
+          <a class="back" href="/logout">LOGOUT</a>
+        </div>
       </div>
     </header>
     <!-- Sidebar -->
@@ -301,31 +304,38 @@
       <a>USER INPUT</a>
       <form>
           <label>Vin<br></label>
-          <input type="text" value="<%=c_Values.v_in%> volt" placeholder="Vin" disabled>
+            <input type="text" value="<%=c_Values.v_in%> volt" placeholder="Vin" disabled>
           <label>Frequency</label>
-          <input type="text" value="<%=c_Values.freq%> Hz"  placeholder="Frequency" disabled>
+            <input type="text" value="<%=c_Values.freq%> Hz"  placeholder="Frequency" disabled>
           <label >Vout</label>
-          <input type="text" value="<%=c_Values.vout%> volt" placeholder="VOut" disabled> 
-        <br>
+            <input type="text" value="<%=c_Values.vout%> volt" placeholder="Vout" disabled> 
+          <br>
+
           <a>OUTPUT</a>
           <label>Capacitor (C1)</label>
-          <input type="text" value="<%=c_Values.c%> &#181F"  placeholder="Capacitor" disabled>
-          <label>Resistor</label>
-          <input type="text" value="<%=c_Values.R2%> ohm" placeholder="Resistor" disabled>
+            <input type="text" value="<%=c_Values.c%> &#181F"  placeholder="Capacitor 1" disabled>
+          <label>Capacitor (C2)</label>
+            <input type="text" value="0.1 &#181F"  placeholder="Capacitor 2" disabled>
+          <label>Capacitor (C3)</label>
+            <input type="text" value="10 &#181F"  placeholder="Capacitor 3" disabled>
+          <label>Capacitor (C4)</label>
+            <input type="text" value="10 &#181F"  placeholder="Capacitor 4" disabled>
+          <label>Capacitor (C5)</label>
+            <input type="text" value="10 &#181F"  placeholder="Capacitor 5" disabled>  
+          <label>Resistor (R1)</label>
+            <input type="text" value="<%=c_Values.R2%> ohm" placeholder="Resistor 1" disabled>
+          <label>Resistor (R2)</label>
+            <input type="text" value="120 ohm" placeholder="Resistor 2" disabled>
           <label>Transformer</label>
-          <input type="text" value="<%=c_Values.v_a%> VA" placeholder="Transformer" disabled>
+            <input type="text" value="<%=c_Values.v_a%> VA" placeholder="Transformer" disabled>
+          <label>Load</label>
+            <input type="text" value="<%=c_Values.vout%> volt"  placeholder="Load" disabled>
           <label>Voltage Regulator</label>
-          <input type="text" value="LM337" placeholder="Voltage Regulator" disabled>
+            <input type="text" value="LM337" placeholder="Voltage Regulator" disabled>
       </form>
-      
     </div>
 
-    <section class="mainpart">
-      <h2></h2>
-    </section>
-
     <!-- Page Content -->
-    <div class="">
 
      <div class="imagebox">
         <br><br>
@@ -359,7 +369,7 @@
           <area shape="rect" coords="1065,258,1120,322" href="#"data-placement="top" data-toggle="popover" data-trigger="focus" title="Load: <%=c_Values.vout%> volt">
         </map>
      </div>
-   </div>
+   
    <script>
     const openNav = () =>{
         document.getElementById('mySidenav').style.width="220px";

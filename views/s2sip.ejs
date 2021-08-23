@@ -28,6 +28,9 @@
     h1{
       font-weight: 700;
     }
+    h4{
+      font-size: 33px;
+    }
     
     @media (min-width: 992px) {
 
@@ -66,7 +69,7 @@
  <body>
    <div class="jumbotron text-center" style="margin-bottom:0">
      <h1>C I R C U I T A T I O N </h1>
-     <h4>A Circuit Designing And Simulation Website</h4> 
+     <h4>A Circuit Schema Provider</h4> 
    </div>
 
     <div>
@@ -87,6 +90,8 @@
       <option >Select</option>
       <option value="0">Variable</option>
       <option value="1">Constant</option> </select></CENTER>
+
+      <!------------------------------ For Variable Dropdown-------------------------->
 
       <div style='display:none;' id='variable'><br/>&nbsp;
         <div class="form-group" id="0">
@@ -136,7 +141,9 @@
          </form>
         </div>
       </div>
-                  
+               
+      <!----------------------------------For Constant Dropdown------------------------------->
+
       <div style='display:none;' id='constant'><br/>&nbsp;
         <div class="form-group" id="1">
           <form class="was-validated" action = "/inputa" method="POST">
@@ -209,5 +216,6 @@
         });
      });
    </script>
+   
   </body>
 </html>

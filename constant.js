@@ -48,26 +48,3 @@ exports.constant = (c1, c2, c3, c4) => {
 
   return { v_a, R2, vout, v_in, c, img_label, freq, n };
 };
-
-// v_a ,R2 , 7905 , v_in
-
-// v_in = 2 * v_in_reg_max;
-
-// const v_in_rms = Math.pow(Math.pow((v_in_max + v_in_min, 2)/8) ,0.5) ;
-
-// variable
-// const v_in_max = v_in + 10;
-// const v_in_min = v_in - 10;
-// const R2 = R1 * (Math.abs(vout) / 1.25);
-//  V_rpp_in_c = V_rpp_in_max
-
-// let voutmin = parseFloat(v5);
-// let vout, sign, v_rpp, RR, T_ja_device, T_jc, Tj_max, T_chs, dp, T_hsa;
-// sign = 8;
-// dp = 2.0;
-// v_rpp = 0.005;
-// RR = 62.0;
-// T_ja_device = 58.3;
-// T_jc = 1.0;
-// Tj_max = 100.0;
-// T_chs = 0.8;
