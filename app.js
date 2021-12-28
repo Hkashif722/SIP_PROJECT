@@ -3,7 +3,7 @@ const ejs = require("ejs");
 const varCalc = require(__dirname + "/variable.js");
 const constCalc = require(__dirname + "/constant");
 const rel_Value = require(__dirname + "/relativeCValue");
-
+require("dotenv").config();
 const mongoose = require("mongoose");
 const session = require("express-session");
 const passport = require("passport");
@@ -25,10 +25,13 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
-mongoose.connect("mongodb+srv://Vanillachoco7:V7QAwQe9UAKsh2F@cluster0.q38bu.mongodb.net/sipDB", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+mongoose.connect(
+  `mongodb+srv://${process.env.USER_NAME}:${process.env.PASSWORD}@cluster0.q38bu.mongodb.net/sipDB`,
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  }
+);
 
 const userSchema = new mongoose.Schema({
   username: String,
@@ -48,7 +51,13 @@ app.get("/", (req, res) => {
 
 app.post("/input", async (req, res) => {
   let value = req.body;
-  let calValue = varCalc.variable(value.v1, value.v2, value.v3, value.v4, value.v5);
+  let calValue = varCalc.variable(
+    value.v1,
+    value.v2,
+    value.v3,
+    value.v4,
+    value.v5
+  );
   if (calValue.vout > 0 && calValue.voutTo > 0) {
     let c = await rel_Value.relativeValue(calValue.c);
     calValue.c = c;
@@ -119,14 +128,18 @@ app.get("/page", (req, res) => {
 });
 
 app.post("/savedetails", (req, res) => {
-  User.register({ username: req.body.username, active: false }, req.body.password, (err, user) => {
-    if (err) res.send(err);
-    else {
-      passport.authenticate("local")(req, res, () => {
-        res.redirect("/page");
-      });
+  User.register(
+    { username: req.body.username, active: false },
+    req.body.password,
+    (err, user) => {
+      if (err) res.send(err);
+      else {
+        passport.authenticate("local")(req, res, () => {
+          res.redirect("/page");
+        });
+      }
     }
-  });
+  );
 });
 
 app.post("/login", (req, res) => {
