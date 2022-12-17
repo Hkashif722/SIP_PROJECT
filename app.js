@@ -1,9 +1,9 @@
+require("dotenv").config();
 const express = require("express");
 const ejs = require("ejs");
 const varCalc = require(__dirname + "/variable.js");
 const constCalc = require(__dirname + "/constant");
 const rel_Value = require(__dirname + "/relativeCValue");
-require("dotenv").config();
 const mongoose = require("mongoose");
 const session = require("express-session");
 const passport = require("passport");
